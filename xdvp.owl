@@ -207,8 +207,15 @@ xdvp:hasVariableKind rdf:type owl:ObjectProperty ,
 
 ###  https://github.com/jdacoello/xdvp/hasVehicleJourney
 xdvp:hasVehicleJourney rdf:type owl:ObjectProperty ;
+                       owl:inverseOf xdvp:isJourneyOfVehicle ;
+                       rdf:type owl:InverseFunctionalProperty ;
                        rdfs:domain vsso-core:Vehicle ;
                        rdfs:range xdvp:VehicleJourney .
+
+
+###  https://github.com/jdacoello/xdvp/isJourneyOfVehicle
+xdvp:isJourneyOfVehicle rdf:type owl:ObjectProperty ,
+                                 owl:FunctionalProperty .
 
 
 ###  https://github.com/jdacoello/xdvp/observedWithUnit

@@ -453,6 +453,7 @@ xdvp:NumericalDataStream rdf:type owl:Class ;
 
 ###  https://github.com/jdacoello/xdvp/VariableKind
 xdvp:VariableKind rdf:type owl:Class ;
+                  rdfs:comment "The type of the variable (e.g., Numerical/Quantifiable, or Categorical/Qualitative)" ;
                   rdfs:label "VariableKind" .
 
 

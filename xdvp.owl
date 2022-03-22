@@ -21,6 +21,7 @@
                                       dc:creator "Daniel Alvarez-Coello"^^xsd:string ;
                                       vann:preferredNamespacePrefix "xdvp" ;
                                       rdfs:comment "This is an ontology eXtension for Dynamic Vehicle Propeties (XDVP). It extends the Vehicle Signal Specification Ontology (VSSo) to handle data streams described by (and derived from) dynamic vehicle properties." ;
+                                      rdfs:label "XDVP" ;
                                       owl:versionInfo 0.1 .
 
 #################################################################
@@ -217,11 +218,37 @@ ssn:implements rdf:type owl:ObjectProperty ;
                              owl:FunctionalProperty .
 
 
+###  https://github.com/jdacoello/xdvp/nextEvent
+:nextEvent rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           owl:inverseOf :previousEvent ;
+           rdfs:domain iot-stream:Event ;
+           rdfs:range iot-stream:Event .
+
+
+###  https://github.com/jdacoello/xdvp/nextObservation
+:nextObservation rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 owl:inverseOf :previousObservation ;
+                 rdfs:domain sosa:Observation ;
+                 rdfs:range sosa:Observation .
+
+
 ###  https://github.com/jdacoello/xdvp/observedWithUnit
 :observedWithUnit rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf owl:topObjectProperty ;
                   rdfs:domain :DataStream ;
                   rdfs:range qudt:Unit .
+
+
+###  https://github.com/jdacoello/xdvp/previousEvent
+:previousEvent rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://github.com/jdacoello/xdvp/previousObservation
+:previousObservation rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty .
 
 
 #################################################################

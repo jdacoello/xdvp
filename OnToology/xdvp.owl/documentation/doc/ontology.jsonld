@@ -127,7 +127,7 @@
   "@id" : "http://purl.org/iot/ontology/iot-stream#Analytics",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@value" : "http://purl.org/iot/ontology/iot-stream"
+    "@id" : "http://purl.org/iot/ontology/iot-stream"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Analytics"
@@ -136,7 +136,7 @@
   "@id" : "http://purl.org/iot/ontology/iot-stream#Event",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@value" : "http://purl.org/iot/ontology/iot-stream"
+    "@id" : "http://purl.org/iot/ontology/iot-stream"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -146,7 +146,7 @@
   "@id" : "http://purl.org/iot/ontology/iot-stream#IotStream",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@value" : "http://purl.org/iot/ontology/iot-stream"
+    "@id" : "http://purl.org/iot/ontology/iot-stream"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "IotStream"
@@ -178,7 +178,7 @@
     "@id" : "http://purl.org/iot/ontology/iot-stream#IotStream"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@value" : "http://purl.org/iot/ontology/iot-stream"
+    "@id" : "http://purl.org/iot/ontology/iot-stream"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -194,7 +194,7 @@
     "@id" : "http://purl.org/iot/ontology/iot-stream#StreamObservation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@value" : "http://purl.org/iot/ontology/iot-stream"
+    "@id" : "http://purl.org/iot/ontology/iot-stream"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -210,7 +210,7 @@
     "@id" : "http://purl.org/iot/ontology/iot-stream#IotStream"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@value" : "http://purl.org/iot/ontology/iot-stream"
+    "@id" : "http://purl.org/iot/ontology/iot-stream"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -226,7 +226,7 @@
     "@id" : "http://purl.org/iot/ontology/iot-stream#Event"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@value" : "http://purl.org/iot/ontology/iot-stream"
+    "@id" : "http://purl.org/iot/ontology/iot-stream"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -242,7 +242,7 @@
     "@id" : "_:genid1"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@value" : "http://purl.org/iot/ontology/iot-stream"
+    "@id" : "http://purl.org/iot/ontology/iot-stream"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -258,7 +258,7 @@
     "@id" : "http://purl.org/iot/ontology/iot-stream#Event"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@value" : "http://purl.org/iot/ontology/iot-stream"
+    "@id" : "http://purl.org/iot/ontology/iot-stream"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -270,7 +270,7 @@
     "@id" : "http://purl.org/iot/ontology/iot-stream#Analytics"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@value" : "http://purl.org/iot/ontology/iot-stream"
+    "@id" : "http://purl.org/iot/ontology/iot-stream"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -282,7 +282,7 @@
     "@id" : "http://purl.org/iot/ontology/iot-stream#Analytics"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@value" : "http://purl.org/iot/ontology/iot-stream"
+    "@id" : "http://purl.org/iot/ontology/iot-stream"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -294,7 +294,7 @@
     "@id" : "http://purl.org/iot/ontology/iot-stream#Analytics"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@value" : "http://purl.org/iot/ontology/iot-stream"
+    "@id" : "http://purl.org/iot/ontology/iot-stream"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -324,7 +324,7 @@
     "@id" : "_:genid7"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@value" : "http://purl.org/iot/ontology/iot-stream"
+    "@id" : "http://purl.org/iot/ontology/iot-stream"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
@@ -336,7 +336,7 @@
     "@id" : "_:genid12"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@value" : "http://purl.org/iot/ontology/iot-stream"
+    "@id" : "http://purl.org/iot/ontology/iot-stream"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
@@ -706,6 +706,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "This is an ontology eXtension for Dynamic Vehicle Propeties (XDVP). It extends the Vehicle Signal Specification Ontology (VSSo) to handle data streams described by (and derived from) dynamic vehicle properties."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "XDVP"
+  } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
     "@value" : "0.1"
@@ -873,6 +876,36 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
+  "@id" : "https://github.com/jdacoello/xdvp/nextEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/iot/ontology/iot-stream#Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/iot/ontology/iot-stream#Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://github.com/jdacoello/xdvp/previousEvent"
+  } ]
+}, {
+  "@id" : "https://github.com/jdacoello/xdvp/nextObservation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://github.com/jdacoello/xdvp/previousObservation"
+  } ]
+}, {
   "@id" : "https://github.com/jdacoello/xdvp/observedWithUnit",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -881,6 +914,18 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://qudt.org/schema/qudt/Unit"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "https://github.com/jdacoello/xdvp/previousEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "https://github.com/jdacoello/xdvp/previousObservation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ]

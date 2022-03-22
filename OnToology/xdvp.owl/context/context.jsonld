@@ -47,11 +47,19 @@
       "@id" : "http://purl.org/iot/ontology/iot-stream#derivedFrom",
       "@type" : "@id"
     },
+    "previousObservation" : {
+      "@id" : "https://github.com/jdacoello/xdvp/previousObservation",
+      "@type" : "@id"
+    },
     "Procedure" : {
       "@id" : "http://www.w3.org/ns/sosa/Procedure"
     },
     "VehicleJourney" : {
       "@id" : "https://github.com/jdacoello/xdvp/VehicleJourney"
+    },
+    "nextEvent" : {
+      "@id" : "https://github.com/jdacoello/xdvp/nextEvent",
+      "@type" : "@id"
     },
     "actsOnProperty" : {
       "@id" : "http://www.w3.org/ns/sosa/actsOnProperty",
@@ -153,6 +161,10 @@
       "@id" : "http://purl.org/iot/ontology/iot-stream#detectedFrom",
       "@type" : "@id"
     },
+    "previousEvent" : {
+      "@id" : "https://github.com/jdacoello/xdvp/previousEvent",
+      "@type" : "@id"
+    },
     "streamEnd" : {
       "@id" : "http://purl.org/iot/ontology/iot-stream#streamEnd"
     },
@@ -164,6 +176,10 @@
     },
     "ObservableProperty" : {
       "@id" : "http://www.w3.org/ns/sosa/ObservableProperty"
+    },
+    "nextObservation" : {
+      "@id" : "https://github.com/jdacoello/xdvp/nextObservation",
+      "@type" : "@id"
     },
     "journeyTravelledDistance" : {
       "@id" : "https://github.com/jdacoello/xdvp/journeyTravelledDistance",

@@ -65,6 +65,9 @@
       "@id" : "http://www.w3.org/ns/sosa/actsOnProperty",
       "@type" : "@id"
     },
+    "Title" : {
+      "@id" : "http://purl.org/dc/terms/Title"
+    },
     "domainIncludes" : {
       "@id" : "http://schema.org/domainIncludes"
     },

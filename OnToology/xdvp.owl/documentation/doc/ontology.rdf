@@ -15,9 +15,9 @@
      xmlns:iot-stream="http://purl.org/iot/ontology/iot-stream#">
     <owl:Ontology rdf:about="https://github.com/jdacoello/xdvp/">
         <dc:creator>Daniel Alvarez-Coello</dc:creator>
+        <terms:Title rdf:resource="https://github.com/jdacoello/xdvp/XDVP"/>
         <vann:preferredNamespacePrefix>xdvp</vann:preferredNamespacePrefix>
         <rdfs:comment>This is an ontology eXtension for Dynamic Vehicle Propeties (XDVP). It extends the Vehicle Signal Specification Ontology (VSSo) to handle data streams described by (and derived from) dynamic vehicle properties.</rdfs:comment>
-        <rdfs:label>XDVP</rdfs:label>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
     </owl:Ontology>
     
@@ -39,6 +39,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/Title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/Title"/>
     
 
 

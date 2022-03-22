@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://github.com/jdacoello/xdvp/"
-     xml:base="https://github.com/jdacoello/xdvp/"
+<rdf:RDF xmlns="https://w3id.org/def/xdvp#"
+     xml:base="https://w3id.org/def/xdvp"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -9,16 +9,17 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:xdvp="https://github.com/jdacoello/xdvp/"
+     xmlns:xdvp="https://w3id.org/def/xdvp#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="http://schema.org/"
      xmlns:iot-stream="http://purl.org/iot/ontology/iot-stream#">
-    <owl:Ontology rdf:about="https://github.com/jdacoello/xdvp/">
+    <owl:Ontology rdf:about="https://w3id.org/def/xdvp#">
         <dc:creator>Daniel Alvarez-Coello</dc:creator>
-        <terms:Title rdf:resource="https://github.com/jdacoello/xdvp/XDVP"/>
-        <vann:preferredNamespacePrefix>xdvp</vann:preferredNamespacePrefix>
+        <terms:Title rdf:resource="https://w3id.org/def/XDVP"/>
+        <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">xdvp</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/def/xdvp#"/>
         <rdfs:comment>This is an ontology eXtension for Dynamic Vehicle Propeties (XDVP). It extends the Vehicle Signal Specification Ontology (VSSo) to handle data streams described by (and derived from) dynamic vehicle properties.</rdfs:comment>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -83,6 +84,13 @@
     
 
 
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
     <!-- http://schema.org/domainIncludes -->
 
 
@@ -118,12 +126,12 @@
     
 
 
-    <!-- https://github.com/jdacoello/xdvp/topic -->
+    <!-- https://w3id.org/def/xdvp#topic -->
 
 
-    <owl:AnnotationProperty rdf:about="https://github.com/jdacoello/xdvp/topic">
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/xdvp#topic">
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:domain rdf:resource="https://github.com/jdacoello/xdvp/DataStream"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/xdvp#DataStream"/>
     </owl:AnnotationProperty>
     
 
@@ -237,7 +245,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/actsOnProperty">
-        <rdfs:domain rdf:resource="https://github.com/jdacoello/xdvp/VehiclePropertyActuation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/xdvp#VehiclePropertyActuation"/>
         <rdfs:range rdf:resource="https://github.com/w3c/vsso-core#ActuatableVehicleProperty"/>
         <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
         <schema:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ActuatableProperty"/>
@@ -274,7 +282,7 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.org/iot/ontology/iot-stream#StreamObservation"/>
-                    <rdf:Description rdf:about="https://github.com/jdacoello/xdvp/VehiclePropertyActuation"/>
+                    <rdf:Description rdf:about="https://w3id.org/def/xdvp#VehiclePropertyActuation"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -306,96 +314,96 @@
     
 
 
-    <!-- https://github.com/jdacoello/xdvp/hasDataStream -->
+    <!-- https://w3id.org/def/xdvp#hasDataStream -->
 
 
-    <owl:ObjectProperty rdf:about="https://github.com/jdacoello/xdvp/hasDataStream">
-        <rdfs:domain rdf:resource="https://github.com/jdacoello/xdvp/VehicleJourney"/>
-        <rdfs:range rdf:resource="https://github.com/jdacoello/xdvp/DataStream"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/xdvp#hasDataStream">
+        <rdfs:domain rdf:resource="https://w3id.org/def/xdvp#VehicleJourney"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/xdvp#DataStream"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://github.com/jdacoello/xdvp/hasVariableKind -->
+    <!-- https://w3id.org/def/xdvp#hasVariableKind -->
 
 
-    <owl:ObjectProperty rdf:about="https://github.com/jdacoello/xdvp/hasVariableKind">
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/xdvp#hasVariableKind">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://github.com/jdacoello/xdvp/DataStream"/>
-        <rdfs:range rdf:resource="https://github.com/jdacoello/xdvp/VariableKind"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/xdvp#DataStream"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/xdvp#VariableKind"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://github.com/jdacoello/xdvp/hasVehicleJourney -->
+    <!-- https://w3id.org/def/xdvp#hasVehicleJourney -->
 
 
-    <owl:ObjectProperty rdf:about="https://github.com/jdacoello/xdvp/hasVehicleJourney">
-        <owl:inverseOf rdf:resource="https://github.com/jdacoello/xdvp/isJourneyOfVehicle"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/xdvp#hasVehicleJourney">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/xdvp#isJourneyOfVehicle"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="https://github.com/w3c/vsso-core#Vehicle"/>
-        <rdfs:range rdf:resource="https://github.com/jdacoello/xdvp/VehicleJourney"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/xdvp#VehicleJourney"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://github.com/jdacoello/xdvp/isJourneyOfVehicle -->
+    <!-- https://w3id.org/def/xdvp#isJourneyOfVehicle -->
 
 
-    <owl:ObjectProperty rdf:about="https://github.com/jdacoello/xdvp/isJourneyOfVehicle">
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/xdvp#isJourneyOfVehicle">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://github.com/jdacoello/xdvp/nextEvent -->
+    <!-- https://w3id.org/def/xdvp#nextEvent -->
 
 
-    <owl:ObjectProperty rdf:about="https://github.com/jdacoello/xdvp/nextEvent">
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/xdvp#nextEvent">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <owl:inverseOf rdf:resource="https://github.com/jdacoello/xdvp/previousEvent"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/def/xdvp#previousEvent"/>
         <rdfs:domain rdf:resource="http://purl.org/iot/ontology/iot-stream#Event"/>
         <rdfs:range rdf:resource="http://purl.org/iot/ontology/iot-stream#Event"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://github.com/jdacoello/xdvp/nextObservation -->
+    <!-- https://w3id.org/def/xdvp#nextObservation -->
 
 
-    <owl:ObjectProperty rdf:about="https://github.com/jdacoello/xdvp/nextObservation">
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/xdvp#nextObservation">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <owl:inverseOf rdf:resource="https://github.com/jdacoello/xdvp/previousObservation"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/def/xdvp#previousObservation"/>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://github.com/jdacoello/xdvp/observedWithUnit -->
+    <!-- https://w3id.org/def/xdvp#observedWithUnit -->
 
 
-    <owl:ObjectProperty rdf:about="https://github.com/jdacoello/xdvp/observedWithUnit">
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/xdvp#observedWithUnit">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="https://github.com/jdacoello/xdvp/DataStream"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/xdvp#DataStream"/>
         <rdfs:range rdf:resource="http://qudt.org/schema/qudt/Unit"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://github.com/jdacoello/xdvp/previousEvent -->
+    <!-- https://w3id.org/def/xdvp#previousEvent -->
 
 
-    <owl:ObjectProperty rdf:about="https://github.com/jdacoello/xdvp/previousEvent">
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/xdvp#previousEvent">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://github.com/jdacoello/xdvp/previousObservation -->
+    <!-- https://w3id.org/def/xdvp#previousObservation -->
 
 
-    <owl:ObjectProperty rdf:about="https://github.com/jdacoello/xdvp/previousObservation">
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/xdvp#previousObservation">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
     </owl:ObjectProperty>
     
@@ -467,7 +475,7 @@
                     <rdf:Description rdf:about="http://purl.org/iot/ontology/iot-stream#Analytics"/>
                     <rdf:Description rdf:about="http://purl.org/iot/ontology/iot-stream#Event"/>
                     <rdf:Description rdf:about="http://purl.org/iot/ontology/iot-stream#StreamObservation"/>
-                    <rdf:Description rdf:about="https://github.com/jdacoello/xdvp/VehiclePropertyActuation"/>
+                    <rdf:Description rdf:about="https://w3id.org/def/xdvp#VehiclePropertyActuation"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -487,7 +495,7 @@
                     <rdf:Description rdf:about="http://purl.org/iot/ontology/iot-stream#Analytics"/>
                     <rdf:Description rdf:about="http://purl.org/iot/ontology/iot-stream#Event"/>
                     <rdf:Description rdf:about="http://purl.org/iot/ontology/iot-stream#StreamObservation"/>
-                    <rdf:Description rdf:about="https://github.com/jdacoello/xdvp/VehiclePropertyActuation"/>
+                    <rdf:Description rdf:about="https://w3id.org/def/xdvp#VehiclePropertyActuation"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -505,7 +513,7 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.org/iot/ontology/iot-stream#StreamObservation"/>
-                    <rdf:Description rdf:about="https://github.com/jdacoello/xdvp/VehiclePropertyActuation"/>
+                    <rdf:Description rdf:about="https://w3id.org/def/xdvp#VehiclePropertyActuation"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -522,31 +530,31 @@
     
 
 
-    <!-- https://github.com/jdacoello/xdvp/journeyAverageSpeed -->
+    <!-- https://w3id.org/def/xdvp#journeyAverageSpeed -->
 
 
-    <owl:DatatypeProperty rdf:about="https://github.com/jdacoello/xdvp/journeyAverageSpeed">
-        <rdfs:domain rdf:resource="https://github.com/jdacoello/xdvp/VehicleJourney"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/xdvp#journeyAverageSpeed">
+        <rdfs:domain rdf:resource="https://w3id.org/def/xdvp#VehicleJourney"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://github.com/jdacoello/xdvp/journeyDuration -->
+    <!-- https://w3id.org/def/xdvp#journeyDuration -->
 
 
-    <owl:DatatypeProperty rdf:about="https://github.com/jdacoello/xdvp/journeyDuration">
-        <rdfs:domain rdf:resource="https://github.com/jdacoello/xdvp/VehicleJourney"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/xdvp#journeyDuration">
+        <rdfs:domain rdf:resource="https://w3id.org/def/xdvp#VehicleJourney"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#duration"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://github.com/jdacoello/xdvp/journeyTravelledDistance -->
+    <!-- https://w3id.org/def/xdvp#journeyTravelledDistance -->
 
 
-    <owl:DatatypeProperty rdf:about="https://github.com/jdacoello/xdvp/journeyTravelledDistance">
-        <rdfs:domain rdf:resource="https://github.com/jdacoello/xdvp/VehicleJourney"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/xdvp#journeyTravelledDistance">
+        <rdfs:domain rdf:resource="https://w3id.org/def/xdvp#VehicleJourney"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
@@ -697,96 +705,6 @@
     
 
 
-    <!-- https://github.com/jdacoello/xdvp/CategoricalDataStream -->
-
-
-    <owl:Class rdf:about="https://github.com/jdacoello/xdvp/CategoricalDataStream">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://github.com/jdacoello/xdvp/DataStream"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/jdacoello/xdvp/hasVariableKind"/>
-                        <owl:hasValue rdf:resource="https://github.com/jdacoello/xdvp/Categorical"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/jdacoello/xdvp/observedWithUnit"/>
-                        <owl:hasValue rdf:resource="http://qudt.org/vocab/unit/UNITLESS"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:comment>A DataStream whose observed values are qualitative (i.e., a value from a defined set of possible categories).</rdfs:comment>
-        <rdfs:label>CategoricalDataStream</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://github.com/jdacoello/xdvp/DataStream -->
-
-
-    <owl:Class rdf:about="https://github.com/jdacoello/xdvp/DataStream">
-        <rdfs:subClassOf rdf:resource="http://purl.org/iot/ontology/iot-stream#IotStream"/>
-        <rdfs:comment>A sequential (and potentially unbounded) flow of events and observations about a particular topic.</rdfs:comment>
-        <rdfs:label>DataStream</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://github.com/jdacoello/xdvp/NumericalDataStream -->
-
-
-    <owl:Class rdf:about="https://github.com/jdacoello/xdvp/NumericalDataStream">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://github.com/jdacoello/xdvp/DataStream"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://github.com/jdacoello/xdvp/hasVariableKind"/>
-                        <owl:hasValue rdf:resource="https://github.com/jdacoello/xdvp/Numerical"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:comment>A DataStream whose observed values are quantities (i.e., a number that can take any value within a range).</rdfs:comment>
-        <rdfs:label>NumericalDataStream</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://github.com/jdacoello/xdvp/VariableKind -->
-
-
-    <owl:Class rdf:about="https://github.com/jdacoello/xdvp/VariableKind">
-        <rdfs:comment>The type of the variable (e.g., Numerical/Quantifiable, or Categorical/Qualitative)</rdfs:comment>
-        <rdfs:label>VariableKind</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://github.com/jdacoello/xdvp/VehicleJourney -->
-
-
-    <owl:Class rdf:about="https://github.com/jdacoello/xdvp/VehicleJourney">
-        <owl:disjointWith rdf:resource="https://github.com/w3c/vsso-core#Vehicle"/>
-        <rdfs:label>VehicleJourney</rdfs:label>
-        <skos:definition>A journey described by the use of a particular vehicle (i.e., a driving session). Each journey belongs to exactly one vehicle and can have multiple data streams.</skos:definition>
-        <skos:example>A particular vehicle moves from point A to point B. This driving session represents a journey.</skos:example>
-    </owl:Class>
-    
-
-
-    <!-- https://github.com/jdacoello/xdvp/VehiclePropertyActuation -->
-
-
-    <owl:Class rdf:about="https://github.com/jdacoello/xdvp/VehiclePropertyActuation">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
-        <rdfs:comment>An actuation procedure to change the state of an ActuatableVehicleProperty.</rdfs:comment>
-        <rdfs:label>VehiclePropertyActuation</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://github.com/w3c/vsso-core#ActuatableVehicleProperty -->
 
 
@@ -813,8 +731,98 @@
 
     <owl:Class rdf:about="https://github.com/w3c/vsso-core#Vehicle">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/def/xdvp#VehicleJourney"/>
         <rdfs:isDefinedBy>https://www.w3.org/ns/vsso-core</rdfs:isDefinedBy>
         <rdfs:label>Vehicle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/xdvp#CategoricalDataStream -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/xdvp#CategoricalDataStream">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/def/xdvp#DataStream"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/def/xdvp#hasVariableKind"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/def/xdvp#Categorical"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/def/xdvp#observedWithUnit"/>
+                        <owl:hasValue rdf:resource="http://qudt.org/vocab/unit/UNITLESS"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>A DataStream whose observed values are qualitative (i.e., a value from a defined set of possible categories).</rdfs:comment>
+        <rdfs:label>CategoricalDataStream</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/xdvp#DataStream -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/xdvp#DataStream">
+        <rdfs:subClassOf rdf:resource="http://purl.org/iot/ontology/iot-stream#IotStream"/>
+        <rdfs:comment>A sequential (and potentially unbounded) flow of events and observations about a particular topic.</rdfs:comment>
+        <rdfs:label>DataStream</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/xdvp#NumericalDataStream -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/xdvp#NumericalDataStream">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/def/xdvp#DataStream"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/def/xdvp#hasVariableKind"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/def/xdvp#Numerical"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>A DataStream whose observed values are quantities (i.e., a number that can take any value within a range).</rdfs:comment>
+        <rdfs:label>NumericalDataStream</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/xdvp#VariableKind -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/xdvp#VariableKind">
+        <rdfs:comment>The type of the variable (e.g., Numerical/Quantifiable, or Categorical/Qualitative)</rdfs:comment>
+        <rdfs:label>VariableKind</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/xdvp#VehicleJourney -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/xdvp#VehicleJourney">
+        <rdfs:label>VehicleJourney</rdfs:label>
+        <skos:definition>A journey described by the use of a particular vehicle (i.e., a driving session). Each journey belongs to exactly one vehicle and can have multiple data streams.</skos:definition>
+        <skos:example>A particular vehicle moves from point A to point B. This driving session represents a journey.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/xdvp#VehiclePropertyActuation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/xdvp#VehiclePropertyActuation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+        <rdfs:comment>An actuation procedure to change the state of an ActuatableVehicleProperty.</rdfs:comment>
+        <rdfs:label>VehiclePropertyActuation</rdfs:label>
     </owl:Class>
     
 
@@ -844,40 +852,40 @@
     
 
 
-    <!-- https://github.com/jdacoello/xdvp/Categorical -->
+    <!-- https://w3id.org/def/xdvp#Categorical -->
 
 
-    <owl:NamedIndividual rdf:about="https://github.com/jdacoello/xdvp/Categorical">
-        <rdf:type rdf:resource="https://github.com/jdacoello/xdvp/VariableKind"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/xdvp#Categorical">
+        <rdf:type rdf:resource="https://w3id.org/def/xdvp#VariableKind"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/jdacoello/xdvp/Numerical -->
+    <!-- https://w3id.org/def/xdvp#Numerical -->
 
 
-    <owl:NamedIndividual rdf:about="https://github.com/jdacoello/xdvp/Numerical">
-        <rdf:type rdf:resource="https://github.com/jdacoello/xdvp/VariableKind"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/xdvp#Numerical">
+        <rdf:type rdf:resource="https://w3id.org/def/xdvp#VariableKind"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/jdacoello/xdvp/indv-Gear -->
+    <!-- https://w3id.org/def/xdvp#indv-Gear -->
 
 
-    <owl:NamedIndividual rdf:about="https://github.com/jdacoello/xdvp/indv-Gear">
-        <rdf:type rdf:resource="https://github.com/jdacoello/xdvp/DataStream"/>
-        <hasVariableKind rdf:resource="https://github.com/jdacoello/xdvp/Categorical"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/xdvp#indv-Gear">
+        <rdf:type rdf:resource="https://w3id.org/def/xdvp#DataStream"/>
+        <hasVariableKind rdf:resource="https://w3id.org/def/xdvp#Categorical"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/jdacoello/xdvp/indv-Speed -->
+    <!-- https://w3id.org/def/xdvp#indv-Speed -->
 
 
-    <owl:NamedIndividual rdf:about="https://github.com/jdacoello/xdvp/indv-Speed">
-        <rdf:type rdf:resource="https://github.com/jdacoello/xdvp/DataStream"/>
-        <hasVariableKind rdf:resource="https://github.com/jdacoello/xdvp/Numerical"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/xdvp#indv-Speed">
+        <rdf:type rdf:resource="https://w3id.org/def/xdvp#DataStream"/>
+        <hasVariableKind rdf:resource="https://w3id.org/def/xdvp#Numerical"/>
     </owl:NamedIndividual>
     
 
@@ -894,9 +902,9 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://github.com/jdacoello/xdvp/DataStream"/>
-            <rdf:Description rdf:about="https://github.com/jdacoello/xdvp/VariableKind"/>
-            <rdf:Description rdf:about="https://github.com/jdacoello/xdvp/VehicleJourney"/>
+            <rdf:Description rdf:about="https://w3id.org/def/xdvp#DataStream"/>
+            <rdf:Description rdf:about="https://w3id.org/def/xdvp#VariableKind"/>
+            <rdf:Description rdf:about="https://w3id.org/def/xdvp#VehicleJourney"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>

@@ -1,9 +1,10 @@
-<https://github.com/jdacoello/xdvp/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://github.com/jdacoello/xdvp/> <http://purl.org/dc/elements/1.1/creator> "Daniel Alvarez-Coello" .
-<https://github.com/jdacoello/xdvp/> <http://purl.org/dc/terms/Title> <https://github.com/jdacoello/xdvp/XDVP> .
-<https://github.com/jdacoello/xdvp/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "xdvp" .
-<https://github.com/jdacoello/xdvp/> <http://www.w3.org/2000/01/rdf-schema#comment> "This is an ontology eXtension for Dynamic Vehicle Propeties (XDVP). It extends the Vehicle Signal Specification Ontology (VSSo) to handle data streams described by (and derived from) dynamic vehicle properties." .
-<https://github.com/jdacoello/xdvp/> <http://www.w3.org/2002/07/owl#versionInfo> "0.1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/def/xdvp#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/def/xdvp#> <http://purl.org/dc/elements/1.1/creator> "Daniel Alvarez-Coello" .
+<https://w3id.org/def/xdvp#> <http://purl.org/dc/terms/Title> <https://w3id.org/def/XDVP> .
+<https://w3id.org/def/xdvp#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "xdvp"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/def/xdvp#> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/def/xdvp#> .
+<https://w3id.org/def/xdvp#> <http://www.w3.org/2000/01/rdf-schema#comment> "This is an ontology eXtension for Dynamic Vehicle Propeties (XDVP). It extends the Vehicle Signal Specification Ontology (VSSo) to handle data streams described by (and derived from) dynamic vehicle properties." .
+<https://w3id.org/def/xdvp#> <http://www.w3.org/2002/07/owl#versionInfo> "0.2"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # 
 # #################################################################
@@ -35,6 +36,9 @@
 # http://purl.org/vocab/vann/preferredNamespacePrefix
 <http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://schema.org/domainIncludes
 <http://schema.org/domainIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
@@ -50,10 +54,10 @@
 # http://www.w3.org/2004/02/skos/core#note
 <http://www.w3.org/2004/02/skos/core#note> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
-# https://github.com/jdacoello/xdvp/topic
-<https://github.com/jdacoello/xdvp/topic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<https://github.com/jdacoello/xdvp/topic> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<https://github.com/jdacoello/xdvp/topic> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/jdacoello/xdvp/DataStream> .
+# https://w3id.org/def/xdvp#topic
+<https://w3id.org/def/xdvp#topic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/def/xdvp#topic> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/def/xdvp#topic> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/xdvp#DataStream> .
 # 
 # 
 # 
@@ -124,7 +128,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://www.w3.org/ns/sosa/actsOnProperty
 <http://www.w3.org/ns/sosa/actsOnProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.w3.org/ns/sosa/actsOnProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/jdacoello/xdvp/VehiclePropertyActuation> .
+<http://www.w3.org/ns/sosa/actsOnProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/xdvp#VehiclePropertyActuation> .
 <http://www.w3.org/ns/sosa/actsOnProperty> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/w3c/vsso-core#ActuatableVehicleProperty> .
 <http://www.w3.org/ns/sosa/actsOnProperty> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuation> .
 <http://www.w3.org/ns/sosa/actsOnProperty> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/ActuatableProperty> .
@@ -151,7 +155,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 _:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://github.com/jdacoello/xdvp/VehiclePropertyActuation> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/xdvp#VehiclePropertyActuation> .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/iot/ontology/iot-stream#StreamObservation> .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
@@ -176,55 +180,55 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://www.w3.org/ns/ssn/implements> <http://www.w3.org/2004/02/skos/core#definition> "Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method)."@en .
 <http://www.w3.org/ns/ssn/implements> <http://www.w3.org/2004/02/skos/core#example> "For example, the relationship between a sensor and the scientific measuring Procedure via which it senses."@en .
 # 
-# https://github.com/jdacoello/xdvp/hasDataStream
-<https://github.com/jdacoello/xdvp/hasDataStream> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://github.com/jdacoello/xdvp/hasDataStream> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/jdacoello/xdvp/VehicleJourney> .
-<https://github.com/jdacoello/xdvp/hasDataStream> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/jdacoello/xdvp/DataStream> .
+# https://w3id.org/def/xdvp#hasDataStream
+<https://w3id.org/def/xdvp#hasDataStream> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/xdvp#hasDataStream> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/xdvp#VehicleJourney> .
+<https://w3id.org/def/xdvp#hasDataStream> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/xdvp#DataStream> .
 # 
-# https://github.com/jdacoello/xdvp/hasVariableKind
-<https://github.com/jdacoello/xdvp/hasVariableKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://github.com/jdacoello/xdvp/hasVariableKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<https://github.com/jdacoello/xdvp/hasVariableKind> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/jdacoello/xdvp/DataStream> .
-<https://github.com/jdacoello/xdvp/hasVariableKind> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/jdacoello/xdvp/VariableKind> .
+# https://w3id.org/def/xdvp#hasVariableKind
+<https://w3id.org/def/xdvp#hasVariableKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/xdvp#hasVariableKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/def/xdvp#hasVariableKind> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/xdvp#DataStream> .
+<https://w3id.org/def/xdvp#hasVariableKind> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/xdvp#VariableKind> .
 # 
-# https://github.com/jdacoello/xdvp/hasVehicleJourney
-<https://github.com/jdacoello/xdvp/hasVehicleJourney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://github.com/jdacoello/xdvp/hasVehicleJourney> <http://www.w3.org/2002/07/owl#inverseOf> <https://github.com/jdacoello/xdvp/isJourneyOfVehicle> .
-<https://github.com/jdacoello/xdvp/hasVehicleJourney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
-<https://github.com/jdacoello/xdvp/hasVehicleJourney> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/w3c/vsso-core#Vehicle> .
-<https://github.com/jdacoello/xdvp/hasVehicleJourney> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/jdacoello/xdvp/VehicleJourney> .
+# https://w3id.org/def/xdvp#hasVehicleJourney
+<https://w3id.org/def/xdvp#hasVehicleJourney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/xdvp#hasVehicleJourney> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/xdvp#isJourneyOfVehicle> .
+<https://w3id.org/def/xdvp#hasVehicleJourney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<https://w3id.org/def/xdvp#hasVehicleJourney> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/w3c/vsso-core#Vehicle> .
+<https://w3id.org/def/xdvp#hasVehicleJourney> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/xdvp#VehicleJourney> .
 # 
-# https://github.com/jdacoello/xdvp/isJourneyOfVehicle
-<https://github.com/jdacoello/xdvp/isJourneyOfVehicle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://github.com/jdacoello/xdvp/isJourneyOfVehicle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+# https://w3id.org/def/xdvp#isJourneyOfVehicle
+<https://w3id.org/def/xdvp#isJourneyOfVehicle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/xdvp#isJourneyOfVehicle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 # 
-# https://github.com/jdacoello/xdvp/nextEvent
-<https://github.com/jdacoello/xdvp/nextEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://github.com/jdacoello/xdvp/nextEvent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
-<https://github.com/jdacoello/xdvp/nextEvent> <http://www.w3.org/2002/07/owl#inverseOf> <https://github.com/jdacoello/xdvp/previousEvent> .
-<https://github.com/jdacoello/xdvp/nextEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/iot/ontology/iot-stream#Event> .
-<https://github.com/jdacoello/xdvp/nextEvent> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/iot/ontology/iot-stream#Event> .
+# https://w3id.org/def/xdvp#nextEvent
+<https://w3id.org/def/xdvp#nextEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/xdvp#nextEvent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/def/xdvp#nextEvent> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/xdvp#previousEvent> .
+<https://w3id.org/def/xdvp#nextEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/iot/ontology/iot-stream#Event> .
+<https://w3id.org/def/xdvp#nextEvent> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/iot/ontology/iot-stream#Event> .
 # 
-# https://github.com/jdacoello/xdvp/nextObservation
-<https://github.com/jdacoello/xdvp/nextObservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://github.com/jdacoello/xdvp/nextObservation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
-<https://github.com/jdacoello/xdvp/nextObservation> <http://www.w3.org/2002/07/owl#inverseOf> <https://github.com/jdacoello/xdvp/previousObservation> .
-<https://github.com/jdacoello/xdvp/nextObservation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Observation> .
-<https://github.com/jdacoello/xdvp/nextObservation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/Observation> .
+# https://w3id.org/def/xdvp#nextObservation
+<https://w3id.org/def/xdvp#nextObservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/xdvp#nextObservation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/def/xdvp#nextObservation> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/xdvp#previousObservation> .
+<https://w3id.org/def/xdvp#nextObservation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Observation> .
+<https://w3id.org/def/xdvp#nextObservation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/Observation> .
 # 
-# https://github.com/jdacoello/xdvp/observedWithUnit
-<https://github.com/jdacoello/xdvp/observedWithUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://github.com/jdacoello/xdvp/observedWithUnit> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
-<https://github.com/jdacoello/xdvp/observedWithUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/jdacoello/xdvp/DataStream> .
-<https://github.com/jdacoello/xdvp/observedWithUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/Unit> .
+# https://w3id.org/def/xdvp#observedWithUnit
+<https://w3id.org/def/xdvp#observedWithUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/xdvp#observedWithUnit> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/def/xdvp#observedWithUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/xdvp#DataStream> .
+<https://w3id.org/def/xdvp#observedWithUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/Unit> .
 # 
-# https://github.com/jdacoello/xdvp/previousEvent
-<https://github.com/jdacoello/xdvp/previousEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://github.com/jdacoello/xdvp/previousEvent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+# https://w3id.org/def/xdvp#previousEvent
+<https://w3id.org/def/xdvp#previousEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/xdvp#previousEvent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
 # 
-# https://github.com/jdacoello/xdvp/previousObservation
-<https://github.com/jdacoello/xdvp/previousObservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://github.com/jdacoello/xdvp/previousObservation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+# https://w3id.org/def/xdvp#previousObservation
+<https://w3id.org/def/xdvp#previousObservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/xdvp#previousObservation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
 # 
 # 
 # 
@@ -267,7 +271,7 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
 _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://github.com/jdacoello/xdvp/VehiclePropertyActuation> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/xdvp#VehiclePropertyActuation> .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/iot/ontology/iot-stream#StreamObservation> .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
@@ -287,7 +291,7 @@ _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
 _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
 _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
 _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://github.com/jdacoello/xdvp/VehiclePropertyActuation> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/xdvp#VehiclePropertyActuation> .
 _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/iot/ontology/iot-stream#StreamObservation> .
 _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
@@ -305,7 +309,7 @@ _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid17 <http://www.w3.org/2002/07/owl#unionOf> _:genid19 .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
 _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://github.com/jdacoello/xdvp/VehiclePropertyActuation> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/xdvp#VehiclePropertyActuation> .
 _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/iot/ontology/iot-stream#StreamObservation> .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
@@ -320,20 +324,20 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/2004/02/skos/core#definition> "The simple value of an Observation or Actuation or act of Sampling."@en .
 <http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/2004/02/skos/core#example> "For instance, the values 23 or true."@en .
 # 
-# https://github.com/jdacoello/xdvp/journeyAverageSpeed
-<https://github.com/jdacoello/xdvp/journeyAverageSpeed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://github.com/jdacoello/xdvp/journeyAverageSpeed> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/jdacoello/xdvp/VehicleJourney> .
-<https://github.com/jdacoello/xdvp/journeyAverageSpeed> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# https://w3id.org/def/xdvp#journeyAverageSpeed
+<https://w3id.org/def/xdvp#journeyAverageSpeed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/xdvp#journeyAverageSpeed> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/xdvp#VehicleJourney> .
+<https://w3id.org/def/xdvp#journeyAverageSpeed> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 # 
-# https://github.com/jdacoello/xdvp/journeyDuration
-<https://github.com/jdacoello/xdvp/journeyDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://github.com/jdacoello/xdvp/journeyDuration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/jdacoello/xdvp/VehicleJourney> .
-<https://github.com/jdacoello/xdvp/journeyDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#duration> .
+# https://w3id.org/def/xdvp#journeyDuration
+<https://w3id.org/def/xdvp#journeyDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/xdvp#journeyDuration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/xdvp#VehicleJourney> .
+<https://w3id.org/def/xdvp#journeyDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#duration> .
 # 
-# https://github.com/jdacoello/xdvp/journeyTravelledDistance
-<https://github.com/jdacoello/xdvp/journeyTravelledDistance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://github.com/jdacoello/xdvp/journeyTravelledDistance> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/jdacoello/xdvp/VehicleJourney> .
-<https://github.com/jdacoello/xdvp/journeyTravelledDistance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# https://w3id.org/def/xdvp#journeyTravelledDistance
+<https://w3id.org/def/xdvp#journeyTravelledDistance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/xdvp#journeyTravelledDistance> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/xdvp#VehicleJourney> .
+<https://w3id.org/def/xdvp#journeyTravelledDistance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 # 
 # 
 # 
@@ -422,70 +426,6 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/2004/02/skos/core#example> "The measured wind speed differs depending on the height of the sensor above the surface, e.g., due to friction. Consequently, procedures for measuring wind speed define a standard height for anemometers above ground, typically 10m for meteorological measures and 2m in Agrometeorology. This definition of height, sensor placement, and so forth are defined by the Procedure."@en .
 <http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/2004/02/skos/core#note> "Many observations may be created via the same Procedure, the same way as many tables are assembled using the same instructions (as information objects, not their concrete realization)."@en .
 # 
-# https://github.com/jdacoello/xdvp/CategoricalDataStream
-<https://github.com/jdacoello/xdvp/CategoricalDataStream> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://github.com/jdacoello/xdvp/CategoricalDataStream> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid20 .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid20 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid25 .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid22 .
-_:genid22 <http://www.w3.org/2002/07/owl#hasValue> <http://qudt.org/vocab/unit/UNITLESS> .
-_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <https://github.com/jdacoello/xdvp/observedWithUnit> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid24 .
-_:genid24 <http://www.w3.org/2002/07/owl#hasValue> <https://github.com/jdacoello/xdvp/Categorical> .
-_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <https://github.com/jdacoello/xdvp/hasVariableKind> .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://github.com/jdacoello/xdvp/DataStream> .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-<https://github.com/jdacoello/xdvp/CategoricalDataStream> <http://www.w3.org/2000/01/rdf-schema#comment> "A DataStream whose observed values are qualitative (i.e., a value from a defined set of possible categories)." .
-<https://github.com/jdacoello/xdvp/CategoricalDataStream> <http://www.w3.org/2000/01/rdf-schema#label> "CategoricalDataStream" .
-# 
-# https://github.com/jdacoello/xdvp/DataStream
-<https://github.com/jdacoello/xdvp/DataStream> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://github.com/jdacoello/xdvp/DataStream> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/iot/ontology/iot-stream#IotStream> .
-<https://github.com/jdacoello/xdvp/DataStream> <http://www.w3.org/2000/01/rdf-schema#comment> "A sequential (and potentially unbounded) flow of events and observations about a particular topic." .
-<https://github.com/jdacoello/xdvp/DataStream> <http://www.w3.org/2000/01/rdf-schema#label> "DataStream" .
-# 
-# https://github.com/jdacoello/xdvp/NumericalDataStream
-<https://github.com/jdacoello/xdvp/NumericalDataStream> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://github.com/jdacoello/xdvp/NumericalDataStream> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid26 .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid26 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid29 .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid28 .
-_:genid28 <http://www.w3.org/2002/07/owl#hasValue> <https://github.com/jdacoello/xdvp/Numerical> .
-_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <https://github.com/jdacoello/xdvp/hasVariableKind> .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://github.com/jdacoello/xdvp/DataStream> .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-<https://github.com/jdacoello/xdvp/NumericalDataStream> <http://www.w3.org/2000/01/rdf-schema#comment> "A DataStream whose observed values are quantities (i.e., a number that can take any value within a range)." .
-<https://github.com/jdacoello/xdvp/NumericalDataStream> <http://www.w3.org/2000/01/rdf-schema#label> "NumericalDataStream" .
-# 
-# https://github.com/jdacoello/xdvp/VariableKind
-<https://github.com/jdacoello/xdvp/VariableKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://github.com/jdacoello/xdvp/VariableKind> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of the variable (e.g., Numerical/Quantifiable, or Categorical/Qualitative)" .
-<https://github.com/jdacoello/xdvp/VariableKind> <http://www.w3.org/2000/01/rdf-schema#label> "VariableKind" .
-# 
-# https://github.com/jdacoello/xdvp/VehicleJourney
-<https://github.com/jdacoello/xdvp/VehicleJourney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://github.com/jdacoello/xdvp/VehicleJourney> <http://www.w3.org/2002/07/owl#disjointWith> <https://github.com/w3c/vsso-core#Vehicle> .
-<https://github.com/jdacoello/xdvp/VehicleJourney> <http://www.w3.org/2000/01/rdf-schema#label> "VehicleJourney" .
-<https://github.com/jdacoello/xdvp/VehicleJourney> <http://www.w3.org/2004/02/skos/core#definition> "A journey described by the use of a particular vehicle (i.e., a driving session). Each journey belongs to exactly one vehicle and can have multiple data streams." .
-<https://github.com/jdacoello/xdvp/VehicleJourney> <http://www.w3.org/2004/02/skos/core#example> "A particular vehicle moves from point A to point B. This driving session represents a journey." .
-# 
-# https://github.com/jdacoello/xdvp/VehiclePropertyActuation
-<https://github.com/jdacoello/xdvp/VehiclePropertyActuation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://github.com/jdacoello/xdvp/VehiclePropertyActuation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Actuation> .
-<https://github.com/jdacoello/xdvp/VehiclePropertyActuation> <http://www.w3.org/2000/01/rdf-schema#comment> "An actuation procedure to change the state of an ActuatableVehicleProperty." .
-<https://github.com/jdacoello/xdvp/VehiclePropertyActuation> <http://www.w3.org/2000/01/rdf-schema#label> "VehiclePropertyActuation" .
-# 
 # https://github.com/w3c/vsso-core#ActuatableVehicleProperty
 <https://github.com/w3c/vsso-core#ActuatableVehicleProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://github.com/w3c/vsso-core#ActuatableVehicleProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/ActuatableProperty> .
@@ -500,8 +440,72 @@ _:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # https://github.com/w3c/vsso-core#Vehicle
 <https://github.com/w3c/vsso-core#Vehicle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://github.com/w3c/vsso-core#Vehicle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Platform> .
+<https://github.com/w3c/vsso-core#Vehicle> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/xdvp#VehicleJourney> .
 <https://github.com/w3c/vsso-core#Vehicle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.w3.org/ns/vsso-core" .
 <https://github.com/w3c/vsso-core#Vehicle> <http://www.w3.org/2000/01/rdf-schema#label> "Vehicle" .
+# 
+# https://w3id.org/def/xdvp#CategoricalDataStream
+<https://w3id.org/def/xdvp#CategoricalDataStream> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/xdvp#CategoricalDataStream> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid20 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid22 .
+_:genid22 <http://www.w3.org/2002/07/owl#hasValue> <http://qudt.org/vocab/unit/UNITLESS> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/xdvp#observedWithUnit> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid24 .
+_:genid24 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/def/xdvp#Categorical> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/xdvp#hasVariableKind> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/xdvp#DataStream> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/def/xdvp#CategoricalDataStream> <http://www.w3.org/2000/01/rdf-schema#comment> "A DataStream whose observed values are qualitative (i.e., a value from a defined set of possible categories)." .
+<https://w3id.org/def/xdvp#CategoricalDataStream> <http://www.w3.org/2000/01/rdf-schema#label> "CategoricalDataStream" .
+# 
+# https://w3id.org/def/xdvp#DataStream
+<https://w3id.org/def/xdvp#DataStream> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/xdvp#DataStream> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/iot/ontology/iot-stream#IotStream> .
+<https://w3id.org/def/xdvp#DataStream> <http://www.w3.org/2000/01/rdf-schema#comment> "A sequential (and potentially unbounded) flow of events and observations about a particular topic." .
+<https://w3id.org/def/xdvp#DataStream> <http://www.w3.org/2000/01/rdf-schema#label> "DataStream" .
+# 
+# https://w3id.org/def/xdvp#NumericalDataStream
+<https://w3id.org/def/xdvp#NumericalDataStream> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/xdvp#NumericalDataStream> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid26 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid28 .
+_:genid28 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/def/xdvp#Numerical> .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/xdvp#hasVariableKind> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/xdvp#DataStream> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/def/xdvp#NumericalDataStream> <http://www.w3.org/2000/01/rdf-schema#comment> "A DataStream whose observed values are quantities (i.e., a number that can take any value within a range)." .
+<https://w3id.org/def/xdvp#NumericalDataStream> <http://www.w3.org/2000/01/rdf-schema#label> "NumericalDataStream" .
+# 
+# https://w3id.org/def/xdvp#VariableKind
+<https://w3id.org/def/xdvp#VariableKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/xdvp#VariableKind> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of the variable (e.g., Numerical/Quantifiable, or Categorical/Qualitative)" .
+<https://w3id.org/def/xdvp#VariableKind> <http://www.w3.org/2000/01/rdf-schema#label> "VariableKind" .
+# 
+# https://w3id.org/def/xdvp#VehicleJourney
+<https://w3id.org/def/xdvp#VehicleJourney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/xdvp#VehicleJourney> <http://www.w3.org/2000/01/rdf-schema#label> "VehicleJourney" .
+<https://w3id.org/def/xdvp#VehicleJourney> <http://www.w3.org/2004/02/skos/core#definition> "A journey described by the use of a particular vehicle (i.e., a driving session). Each journey belongs to exactly one vehicle and can have multiple data streams." .
+<https://w3id.org/def/xdvp#VehicleJourney> <http://www.w3.org/2004/02/skos/core#example> "A particular vehicle moves from point A to point B. This driving session represents a journey." .
+# 
+# https://w3id.org/def/xdvp#VehiclePropertyActuation
+<https://w3id.org/def/xdvp#VehiclePropertyActuation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/xdvp#VehiclePropertyActuation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Actuation> .
+<https://w3id.org/def/xdvp#VehiclePropertyActuation> <http://www.w3.org/2000/01/rdf-schema#comment> "An actuation procedure to change the state of an ActuatableVehicleProperty." .
+<https://w3id.org/def/xdvp#VehiclePropertyActuation> <http://www.w3.org/2000/01/rdf-schema#label> "VehiclePropertyActuation" .
 # 
 # 
 # 
@@ -520,23 +524,23 @@ _:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <http://qudt.org/vocab/unit/UNITLESS> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://qudt.org/vocab/unit> .
 <http://qudt.org/vocab/unit/UNITLESS> <http://www.w3.org/2000/01/rdf-schema#label> "Unitless"@en .
 # 
-# https://github.com/jdacoello/xdvp/Categorical
-<https://github.com/jdacoello/xdvp/Categorical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://github.com/jdacoello/xdvp/Categorical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/jdacoello/xdvp/VariableKind> .
+# https://w3id.org/def/xdvp#Categorical
+<https://w3id.org/def/xdvp#Categorical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/xdvp#Categorical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/xdvp#VariableKind> .
 # 
-# https://github.com/jdacoello/xdvp/Numerical
-<https://github.com/jdacoello/xdvp/Numerical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://github.com/jdacoello/xdvp/Numerical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/jdacoello/xdvp/VariableKind> .
+# https://w3id.org/def/xdvp#Numerical
+<https://w3id.org/def/xdvp#Numerical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/xdvp#Numerical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/xdvp#VariableKind> .
 # 
-# https://github.com/jdacoello/xdvp/indv-Gear
-<https://github.com/jdacoello/xdvp/indv-Gear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://github.com/jdacoello/xdvp/indv-Gear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/jdacoello/xdvp/DataStream> .
-<https://github.com/jdacoello/xdvp/indv-Gear> <https://github.com/jdacoello/xdvp/hasVariableKind> <https://github.com/jdacoello/xdvp/Categorical> .
+# https://w3id.org/def/xdvp#indv-Gear
+<https://w3id.org/def/xdvp#indv-Gear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/xdvp#indv-Gear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/xdvp#DataStream> .
+<https://w3id.org/def/xdvp#indv-Gear> <https://w3id.org/def/xdvp#hasVariableKind> <https://w3id.org/def/xdvp#Categorical> .
 # 
-# https://github.com/jdacoello/xdvp/indv-Speed
-<https://github.com/jdacoello/xdvp/indv-Speed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://github.com/jdacoello/xdvp/indv-Speed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://github.com/jdacoello/xdvp/DataStream> .
-<https://github.com/jdacoello/xdvp/indv-Speed> <https://github.com/jdacoello/xdvp/hasVariableKind> <https://github.com/jdacoello/xdvp/Numerical> .
+# https://w3id.org/def/xdvp#indv-Speed
+<https://w3id.org/def/xdvp#indv-Speed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/xdvp#indv-Speed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/xdvp#DataStream> .
+<https://w3id.org/def/xdvp#indv-Speed> <https://w3id.org/def/xdvp#hasVariableKind> <https://w3id.org/def/xdvp#Numerical> .
 # 
 # 
 # 
@@ -552,11 +556,11 @@ _:genid30 <http://www.w3.org/2002/07/owl#members> _:genid33 .
 _:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
 _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
 _:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://github.com/jdacoello/xdvp/VehicleJourney> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/xdvp#VehicleJourney> .
 _:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://github.com/jdacoello/xdvp/VariableKind> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/xdvp#VariableKind> .
 _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://github.com/jdacoello/xdvp/DataStream> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/xdvp#DataStream> .
 _:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

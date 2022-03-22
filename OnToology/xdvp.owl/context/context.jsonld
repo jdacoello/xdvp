@@ -1,7 +1,7 @@
 {
   "@context" : {
     "journeyAverageSpeed" : {
-      "@id" : "https://github.com/jdacoello/xdvp/journeyAverageSpeed",
+      "@id" : "https://w3id.org/def/xdvp#journeyAverageSpeed",
       "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     "belongsTo" : {
@@ -13,25 +13,25 @@
       "@type" : "@id"
     },
     "journeyDuration" : {
-      "@id" : "https://github.com/jdacoello/xdvp/journeyDuration",
+      "@id" : "https://w3id.org/def/xdvp#journeyDuration",
       "@type" : "http://www.w3.org/2001/XMLSchema#duration"
     },
     "Unit" : {
       "@id" : "http://qudt.org/schema/qudt/Unit"
     },
     "hasVariableKind" : {
-      "@id" : "https://github.com/jdacoello/xdvp/hasVariableKind",
+      "@id" : "https://w3id.org/def/xdvp#hasVariableKind",
       "@type" : "@id"
     },
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
     },
     "isJourneyOfVehicle" : {
-      "@id" : "https://github.com/jdacoello/xdvp/isJourneyOfVehicle",
+      "@id" : "https://w3id.org/def/xdvp#isJourneyOfVehicle",
       "@type" : "@id"
     },
     "hasDataStream" : {
-      "@id" : "https://github.com/jdacoello/xdvp/hasDataStream",
+      "@id" : "https://w3id.org/def/xdvp#hasDataStream",
       "@type" : "@id"
     },
     "example" : {
@@ -48,17 +48,17 @@
       "@type" : "@id"
     },
     "previousObservation" : {
-      "@id" : "https://github.com/jdacoello/xdvp/previousObservation",
+      "@id" : "https://w3id.org/def/xdvp#previousObservation",
       "@type" : "@id"
     },
     "Procedure" : {
       "@id" : "http://www.w3.org/ns/sosa/Procedure"
     },
     "VehicleJourney" : {
-      "@id" : "https://github.com/jdacoello/xdvp/VehicleJourney"
+      "@id" : "https://w3id.org/def/xdvp#VehicleJourney"
     },
     "nextEvent" : {
-      "@id" : "https://github.com/jdacoello/xdvp/nextEvent",
+      "@id" : "https://w3id.org/def/xdvp#nextEvent",
       "@type" : "@id"
     },
     "actsOnProperty" : {
@@ -79,7 +79,7 @@
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "CategoricalDataStream" : {
-      "@id" : "https://github.com/jdacoello/xdvp/CategoricalDataStream"
+      "@id" : "https://w3id.org/def/xdvp#CategoricalDataStream"
     },
     "methods" : {
       "@id" : "http://purl.org/iot/ontology/iot-stream#methods",
@@ -96,7 +96,7 @@
       "@type" : "@id"
     },
     "observedWithUnit" : {
-      "@id" : "https://github.com/jdacoello/xdvp/observedWithUnit",
+      "@id" : "https://w3id.org/def/xdvp#observedWithUnit",
       "@type" : "@id"
     },
     "creator" : {
@@ -130,7 +130,7 @@
       "@id" : "https://github.com/w3c/vsso-core#ObservableVehicleProperty"
     },
     "VehiclePropertyActuation" : {
-      "@id" : "https://github.com/jdacoello/xdvp/VehiclePropertyActuation"
+      "@id" : "https://w3id.org/def/xdvp#VehiclePropertyActuation"
     },
     "isDefinedBy" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
@@ -147,7 +147,7 @@
       "@type" : "@id"
     },
     "DataStream" : {
-      "@id" : "https://github.com/jdacoello/xdvp/DataStream"
+      "@id" : "https://w3id.org/def/xdvp#DataStream"
     },
     "observedProperty" : {
       "@id" : "http://www.w3.org/ns/sosa/observedProperty",
@@ -165,7 +165,7 @@
       "@type" : "@id"
     },
     "previousEvent" : {
-      "@id" : "https://github.com/jdacoello/xdvp/previousEvent",
+      "@id" : "https://w3id.org/def/xdvp#previousEvent",
       "@type" : "@id"
     },
     "streamEnd" : {
@@ -181,11 +181,11 @@
       "@id" : "http://www.w3.org/ns/sosa/ObservableProperty"
     },
     "nextObservation" : {
-      "@id" : "https://github.com/jdacoello/xdvp/nextObservation",
+      "@id" : "https://w3id.org/def/xdvp#nextObservation",
       "@type" : "@id"
     },
     "journeyTravelledDistance" : {
-      "@id" : "https://github.com/jdacoello/xdvp/journeyTravelledDistance",
+      "@id" : "https://w3id.org/def/xdvp#journeyTravelledDistance",
       "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     "parameters" : {
@@ -199,23 +199,26 @@
       "@id" : "http://www.w3.org/ns/sosa/Actuation"
     },
     "hasVehicleJourney" : {
-      "@id" : "https://github.com/jdacoello/xdvp/hasVehicleJourney",
+      "@id" : "https://w3id.org/def/xdvp#hasVehicleJourney",
       "@type" : "@id"
     },
     "description" : {
       "@id" : "http://purl.org/dc/terms/description"
     },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
     "NumericalDataStream" : {
-      "@id" : "https://github.com/jdacoello/xdvp/NumericalDataStream"
+      "@id" : "https://w3id.org/def/xdvp#NumericalDataStream"
     },
     "Observation" : {
       "@id" : "http://www.w3.org/ns/sosa/Observation"
     },
     "topic" : {
-      "@id" : "https://github.com/jdacoello/xdvp/topic"
+      "@id" : "https://w3id.org/def/xdvp#topic"
     },
     "VariableKind" : {
-      "@id" : "https://github.com/jdacoello/xdvp/VariableKind"
+      "@id" : "https://w3id.org/def/xdvp#VariableKind"
     },
     "hasSimpleResult" : {
       "@id" : "http://www.w3.org/ns/sosa/hasSimpleResult",

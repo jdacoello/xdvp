@@ -19,7 +19,7 @@
     }, {
       "@id" : "http://purl.org/iot/ontology/iot-stream#StreamObservation"
     }, {
-      "@id" : "https://github.com/jdacoello/xdvp/VehiclePropertyActuation"
+      "@id" : "https://w3id.org/def/xdvp#VehiclePropertyActuation"
     } ]
   } ]
 }, {
@@ -29,7 +29,7 @@
     "@list" : [ {
       "@id" : "http://purl.org/iot/ontology/iot-stream#StreamObservation"
     }, {
-      "@id" : "https://github.com/jdacoello/xdvp/VehiclePropertyActuation"
+      "@id" : "https://w3id.org/def/xdvp#VehiclePropertyActuation"
     } ]
   } ]
 }, {
@@ -37,7 +37,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "https://github.com/jdacoello/xdvp/DataStream"
+      "@id" : "https://w3id.org/def/xdvp#DataStream"
     }, {
       "@id" : "_:genid24"
     }, {
@@ -51,23 +51,23 @@
     "@id" : "http://qudt.org/vocab/unit/UNITLESS"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://github.com/jdacoello/xdvp/observedWithUnit"
+    "@id" : "https://w3id.org/def/xdvp#observedWithUnit"
   } ]
 }, {
   "@id" : "_:genid24",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://github.com/jdacoello/xdvp/Categorical"
+    "@id" : "https://w3id.org/def/xdvp#Categorical"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://github.com/jdacoello/xdvp/hasVariableKind"
+    "@id" : "https://w3id.org/def/xdvp#hasVariableKind"
   } ]
 }, {
   "@id" : "_:genid26",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "https://github.com/jdacoello/xdvp/DataStream"
+      "@id" : "https://w3id.org/def/xdvp#DataStream"
     }, {
       "@id" : "_:genid28"
     } ]
@@ -76,21 +76,21 @@
   "@id" : "_:genid28",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://github.com/jdacoello/xdvp/Numerical"
+    "@id" : "https://w3id.org/def/xdvp#Numerical"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://github.com/jdacoello/xdvp/hasVariableKind"
+    "@id" : "https://w3id.org/def/xdvp#hasVariableKind"
   } ]
 }, {
   "@id" : "_:genid30",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
-      "@id" : "https://github.com/jdacoello/xdvp/DataStream"
+      "@id" : "https://w3id.org/def/xdvp#DataStream"
     }, {
-      "@id" : "https://github.com/jdacoello/xdvp/VariableKind"
+      "@id" : "https://w3id.org/def/xdvp#VariableKind"
     }, {
-      "@id" : "https://github.com/jdacoello/xdvp/VehicleJourney"
+      "@id" : "https://w3id.org/def/xdvp#VehicleJourney"
     } ]
   } ]
 }, {
@@ -100,7 +100,7 @@
     "@list" : [ {
       "@id" : "http://purl.org/iot/ontology/iot-stream#StreamObservation"
     }, {
-      "@id" : "https://github.com/jdacoello/xdvp/VehiclePropertyActuation"
+      "@id" : "https://w3id.org/def/xdvp#VehiclePropertyActuation"
     } ]
   } ]
 }, {
@@ -114,7 +114,7 @@
     }, {
       "@id" : "http://purl.org/iot/ontology/iot-stream#StreamObservation"
     }, {
-      "@id" : "https://github.com/jdacoello/xdvp/VehiclePropertyActuation"
+      "@id" : "https://w3id.org/def/xdvp#VehiclePropertyActuation"
     } ]
   } ]
 }, {
@@ -348,6 +348,9 @@
   "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://qudt.org/schema/qudt/Unit",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -550,7 +553,7 @@
     "@value" : "Relation between an Actuation and the property of a FeatureOfInterest it is acting upon."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://github.com/jdacoello/xdvp/VehiclePropertyActuation"
+    "@id" : "https://w3id.org/def/xdvp#VehiclePropertyActuation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://www.w3.org/ns/sosa/"
@@ -698,250 +701,6 @@
     "@value" : "For example, the relationship between a sensor and the scientific measuring Procedure via which it senses."
   } ]
 }, {
-  "@id" : "https://github.com/jdacoello/xdvp/",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
-  "http://purl.org/dc/elements/1.1/creator" : [ {
-    "@value" : "Daniel Alvarez-Coello"
-  } ],
-  "http://purl.org/dc/terms/Title" : [ {
-    "@id" : "https://github.com/jdacoello/xdvp/XDVP"
-  } ],
-  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
-    "@value" : "xdvp"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This is an ontology eXtension for Dynamic Vehicle Propeties (XDVP). It extends the Vehicle Signal Specification Ontology (VSSo) to handle data streams described by (and derived from) dynamic vehicle properties."
-  } ],
-  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "@value" : "0.1"
-  } ]
-}, {
-  "@id" : "https://github.com/jdacoello/xdvp/Categorical",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://github.com/jdacoello/xdvp/VariableKind"
-  } ]
-}, {
-  "@id" : "https://github.com/jdacoello/xdvp/CategoricalDataStream",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A DataStream whose observed values are qualitative (i.e., a value from a defined set of possible categories)."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "CategoricalDataStream"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid20"
-  } ]
-}, {
-  "@id" : "https://github.com/jdacoello/xdvp/DataStream",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A sequential (and potentially unbounded) flow of events and observations about a particular topic."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "DataStream"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/iot/ontology/iot-stream#IotStream"
-  } ]
-}, {
-  "@id" : "https://github.com/jdacoello/xdvp/Numerical",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://github.com/jdacoello/xdvp/VariableKind"
-  } ]
-}, {
-  "@id" : "https://github.com/jdacoello/xdvp/NumericalDataStream",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A DataStream whose observed values are quantities (i.e., a number that can take any value within a range)."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "NumericalDataStream"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid26"
-  } ]
-}, {
-  "@id" : "https://github.com/jdacoello/xdvp/VariableKind",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The type of the variable (e.g., Numerical/Quantifiable, or Categorical/Qualitative)"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "VariableKind"
-  } ]
-}, {
-  "@id" : "https://github.com/jdacoello/xdvp/VehicleJourney",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "VehicleJourney"
-  } ],
-  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "https://github.com/w3c/vsso-core#Vehicle"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@value" : "A journey described by the use of a particular vehicle (i.e., a driving session). Each journey belongs to exactly one vehicle and can have multiple data streams."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#example" : [ {
-    "@value" : "A particular vehicle moves from point A to point B. This driving session represents a journey."
-  } ]
-}, {
-  "@id" : "https://github.com/jdacoello/xdvp/VehiclePropertyActuation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "An actuation procedure to change the state of an ActuatableVehicleProperty."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "VehiclePropertyActuation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/sosa/Actuation"
-  } ]
-}, {
-  "@id" : "https://github.com/jdacoello/xdvp/hasDataStream",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://github.com/jdacoello/xdvp/VehicleJourney"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://github.com/jdacoello/xdvp/DataStream"
-  } ]
-}, {
-  "@id" : "https://github.com/jdacoello/xdvp/hasVariableKind",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://github.com/jdacoello/xdvp/DataStream"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://github.com/jdacoello/xdvp/VariableKind"
-  } ]
-}, {
-  "@id" : "https://github.com/jdacoello/xdvp/hasVehicleJourney",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://github.com/w3c/vsso-core#Vehicle"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://github.com/jdacoello/xdvp/VehicleJourney"
-  } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://github.com/jdacoello/xdvp/isJourneyOfVehicle"
-  } ]
-}, {
-  "@id" : "https://github.com/jdacoello/xdvp/indv-Gear",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://github.com/jdacoello/xdvp/DataStream"
-  } ],
-  "https://github.com/jdacoello/xdvp/hasVariableKind" : [ {
-    "@id" : "https://github.com/jdacoello/xdvp/Categorical"
-  } ]
-}, {
-  "@id" : "https://github.com/jdacoello/xdvp/indv-Speed",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://github.com/jdacoello/xdvp/DataStream"
-  } ],
-  "https://github.com/jdacoello/xdvp/hasVariableKind" : [ {
-    "@id" : "https://github.com/jdacoello/xdvp/Numerical"
-  } ]
-}, {
-  "@id" : "https://github.com/jdacoello/xdvp/isJourneyOfVehicle",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ]
-}, {
-  "@id" : "https://github.com/jdacoello/xdvp/journeyAverageSpeed",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://github.com/jdacoello/xdvp/VehicleJourney"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
-  } ]
-}, {
-  "@id" : "https://github.com/jdacoello/xdvp/journeyDuration",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://github.com/jdacoello/xdvp/VehicleJourney"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#duration"
-  } ]
-}, {
-  "@id" : "https://github.com/jdacoello/xdvp/journeyTravelledDistance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://github.com/jdacoello/xdvp/VehicleJourney"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
-  } ]
-}, {
-  "@id" : "https://github.com/jdacoello/xdvp/nextEvent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/iot/ontology/iot-stream#Event"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/iot/ontology/iot-stream#Event"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
-  } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://github.com/jdacoello/xdvp/previousEvent"
-  } ]
-}, {
-  "@id" : "https://github.com/jdacoello/xdvp/nextObservation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.w3.org/ns/sosa/Observation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/ns/sosa/Observation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
-  } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://github.com/jdacoello/xdvp/previousObservation"
-  } ]
-}, {
-  "@id" : "https://github.com/jdacoello/xdvp/observedWithUnit",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://github.com/jdacoello/xdvp/DataStream"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://qudt.org/schema/qudt/Unit"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
-  } ]
-}, {
-  "@id" : "https://github.com/jdacoello/xdvp/previousEvent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
-  } ]
-}, {
-  "@id" : "https://github.com/jdacoello/xdvp/previousObservation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
-  } ]
-}, {
-  "@id" : "https://github.com/jdacoello/xdvp/topic",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://github.com/jdacoello/xdvp/DataStream"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
-  } ]
-}, {
   "@id" : "https://github.com/w3c/vsso-core#ActuatableVehicleProperty",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
@@ -973,5 +732,253 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/ns/sosa/Platform"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/def/xdvp#VehicleJourney"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/xdvp#",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Daniel Alvarez-Coello"
+  } ],
+  "http://purl.org/dc/terms/Title" : [ {
+    "@id" : "https://w3id.org/def/XDVP"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "@value" : "xdvp"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@id" : "https://w3id.org/def/xdvp#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This is an ontology eXtension for Dynamic Vehicle Propeties (XDVP). It extends the Vehicle Signal Specification Ontology (VSSo) to handle data streams described by (and derived from) dynamic vehicle properties."
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/xdvp#Categorical",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/xdvp#VariableKind"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/xdvp#CategoricalDataStream",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A DataStream whose observed values are qualitative (i.e., a value from a defined set of possible categories)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "CategoricalDataStream"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid20"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/xdvp#DataStream",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A sequential (and potentially unbounded) flow of events and observations about a particular topic."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DataStream"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/iot/ontology/iot-stream#IotStream"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/xdvp#Numerical",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/xdvp#VariableKind"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/xdvp#NumericalDataStream",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A DataStream whose observed values are quantities (i.e., a number that can take any value within a range)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "NumericalDataStream"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid26"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/xdvp#VariableKind",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The type of the variable (e.g., Numerical/Quantifiable, or Categorical/Qualitative)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "VariableKind"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/xdvp#VehicleJourney",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "VehicleJourney"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "A journey described by the use of a particular vehicle (i.e., a driving session). Each journey belongs to exactly one vehicle and can have multiple data streams."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "A particular vehicle moves from point A to point B. This driving session represents a journey."
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/xdvp#VehiclePropertyActuation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An actuation procedure to change the state of an ActuatableVehicleProperty."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "VehiclePropertyActuation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Actuation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/xdvp#hasDataStream",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/xdvp#VehicleJourney"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/def/xdvp#DataStream"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/xdvp#hasVariableKind",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/xdvp#DataStream"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/def/xdvp#VariableKind"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/xdvp#hasVehicleJourney",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://github.com/w3c/vsso-core#Vehicle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/def/xdvp#VehicleJourney"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/def/xdvp#isJourneyOfVehicle"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/xdvp#indv-Gear",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/xdvp#DataStream"
+  } ],
+  "https://w3id.org/def/xdvp#hasVariableKind" : [ {
+    "@id" : "https://w3id.org/def/xdvp#Categorical"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/xdvp#indv-Speed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/xdvp#DataStream"
+  } ],
+  "https://w3id.org/def/xdvp#hasVariableKind" : [ {
+    "@id" : "https://w3id.org/def/xdvp#Numerical"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/xdvp#isJourneyOfVehicle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/xdvp#journeyAverageSpeed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/xdvp#VehicleJourney"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/xdvp#journeyDuration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/xdvp#VehicleJourney"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#duration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/xdvp#journeyTravelledDistance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/xdvp#VehicleJourney"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/xdvp#nextEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/iot/ontology/iot-stream#Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/iot/ontology/iot-stream#Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/def/xdvp#previousEvent"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/xdvp#nextObservation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/def/xdvp#previousObservation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/xdvp#observedWithUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/xdvp#DataStream"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://qudt.org/schema/qudt/Unit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/xdvp#previousEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/xdvp#previousObservation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/xdvp#topic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/xdvp#DataStream"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 } ]

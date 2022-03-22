@@ -2,9 +2,9 @@
   "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
   "header" : {
     "languages" : [ "en", "undefined" ],
-    "baseIris" : [ "https://github.com/jdacoello/xdvp", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://qudt.org/schema/qudt", "http://www.w3.org/ns/ssn", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "https://github.com/w3c/vsso-core", "http://www.w3.org/2001/XMLSchema", "http://www.w3.org/ns/sosa", "http://purl.org/iot/ontology/iot-stream" ],
-    "iri" : "https://github.com/jdacoello/xdvp/",
-    "version" : "0.1",
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://qudt.org/schema/qudt", "http://www.w3.org/ns/ssn", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "https://w3id.org/def/xdvp", "https://github.com/w3c/vsso-core", "http://www.w3.org/2001/XMLSchema", "http://www.w3.org/ns/sosa", "http://purl.org/iot/ontology/iot-stream" ],
+    "iri" : "https://w3id.org/def/xdvp#",
+    "version" : "0.2",
     "author" : [ "Daniel Alvarez-Coello" ],
     "comments" : {
       "undefined" : "This is an ontology eXtension for Dynamic Vehicle Propeties (XDVP). It extends the Vehicle Signal Specification Ontology (VSSo) to handle data streams described by (and derived from) dynamic vehicle properties."
@@ -25,80 +25,98 @@
       "Title" : [ {
         "identifier" : "Title",
         "language" : "undefined",
-        "value" : "https://github.com/jdacoello/xdvp/XDVP",
+        "value" : "https://w3id.org/def/XDVP",
         "type" : "iri"
       } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
-        "value" : "0.1",
+        "value" : "0.2",
         "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/def/xdvp#",
+        "type" : "iri"
       } ]
     }
   },
   "namespace" : [ ],
   "class" : [ {
-    "id" : "10",
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
     "type" : "owl:Class"
   }, {
     "id" : "22",
     "type" : "owl:Class"
   }, {
+    "id" : "30",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
     "id" : "16",
     "type" : "owl:Class"
   }, {
-    "id" : "3",
+    "id" : "5",
     "type" : "owl:Class"
   }, {
-    "id" : "34",
-    "type" : "owl:Class"
-  }, {
-    "id" : "9",
+    "id" : "44",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "47",
+    "id" : "21",
     "type" : "rdfs:Datatype"
-  }, {
-    "id" : "1",
-    "type" : "owl:Thing"
-  }, {
-    "id" : "48",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "49",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "50",
-    "type" : "owl:Class"
-  }, {
-    "id" : "4",
-    "type" : "rdfs:Literal"
-  }, {
-    "id" : "51",
-    "type" : "rdfs:Literal"
-  }, {
-    "id" : "19",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "52",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "20",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "40",
-    "type" : "owl:Class"
-  }, {
-    "id" : "53",
-    "type" : "owl:intersectionOf"
   }, {
     "id" : "7",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "45",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "48",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "18",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "51",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "37",
     "type" : "owl:Class"
   }, {
     "id" : "54",
     "type" : "owl:Class"
   }, {
-    "id" : "38",
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
     "type" : "owl:Class"
   }, {
     "id" : "56",
@@ -110,43 +128,67 @@
     "id" : "60",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "17",
+    "id" : "14",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "43",
+    "id" : "41",
     "type" : "rdfs:Datatype"
-  }, {
-    "id" : "33",
-    "type" : "owl:Class"
   }, {
     "id" : "61",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "31",
-    "type" : "owl:Class"
-  }, {
-    "id" : "6",
-    "type" : "owl:Class"
-  }, {
-    "id" : "46",
-    "type" : "owl:Class"
-  }, {
     "id" : "29",
     "type" : "owl:Class"
   }, {
-    "id" : "14",
+    "id" : "2",
     "type" : "owl:Class"
   }, {
-    "id" : "37",
+    "id" : "28",
     "type" : "owl:Class"
   }, {
-    "id" : "12",
+    "id" : "11",
     "type" : "owl:Class"
   }, {
-    "id" : "72",
-    "type" : "owl:intersectionOf"
+    "id" : "34",
+    "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
+    "iri" : "https://w3id.org/def/xdvp#VehicleJourney",
+    "baseIri" : "https://w3id.org/def/xdvp",
+    "instances" : 0,
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "A journey described by the use of a particular vehicle (i.e., a driving session). Each journey belongs to exactly one vehicle and can have multiple data streams.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "A particular vehicle moves from point A to point B. This driving session represents a journey.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "VehicleJourney",
+      "undefined" : "VehicleJourney"
+    },
+    "id" : "0"
+  }, {
+    "iri" : "https://w3id.org/def/xdvp#VehiclePropertyActuation",
+    "baseIri" : "https://w3id.org/def/xdvp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "VehiclePropertyActuation",
+      "undefined" : "VehiclePropertyActuation"
+    },
+    "comment" : {
+      "undefined" : "An actuation procedure to change the state of an ActuatableVehicleProperty."
+    },
+    "id" : "4",
+    "superClasses" : [ "5" ]
+  }, {
     "iri" : "http://qudt.org/schema/qudt/Unit",
     "baseIri" : "http://qudt.org/schema/qudt",
     "instances" : 0,
@@ -190,7 +232,7 @@
       "undefined" : "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  \\(Q = nU\\)."
     },
     "attributes" : [ "external" ],
-    "id" : "10"
+    "id" : "9"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/Observation",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -219,12 +261,51 @@
       "IRI-based" : "Observation",
       "en" : "Observation"
     },
-    "subClasses" : [ "6" ],
+    "subClasses" : [ "2" ],
     "comment" : {
       "en" : "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with."
     },
     "attributes" : [ "external" ],
     "id" : "22"
+  }, {
+    "iri" : "https://w3id.org/def/xdvp#CategoricalDataStream",
+    "baseIri" : "https://w3id.org/def/xdvp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CategoricalDataStream",
+      "undefined" : "CategoricalDataStream"
+    },
+    "intersection" : [ "16" ],
+    "comment" : {
+      "undefined" : "A DataStream whose observed values are qualitative (i.e., a value from a defined set of possible categories)."
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "30"
+  }, {
+    "iri" : "https://w3id.org/def/xdvp#VariableKind",
+    "baseIri" : "https://w3id.org/def/xdvp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "VariableKind",
+      "undefined" : "VariableKind"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/def/xdvp#Numerical",
+      "baseIri" : "https://w3id.org/def/xdvp",
+      "labels" : {
+        "IRI-based" : "Numerical"
+      }
+    }, {
+      "iri" : "https://w3id.org/def/xdvp#Categorical",
+      "baseIri" : "https://w3id.org/def/xdvp",
+      "labels" : {
+        "IRI-based" : "Categorical"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "The type of the variable (e.g., Numerical/Quantifiable, or Categorical/Qualitative)"
+    },
+    "id" : "42"
   }, {
     "iri" : "http://purl.org/iot/ontology/iot-stream#Analytics",
     "baseIri" : "http://purl.org/iot/ontology/iot-stream",
@@ -242,30 +323,33 @@
       "undefined" : "Analytics"
     },
     "attributes" : [ "external" ],
-    "id" : "16"
+    "id" : "13"
   }, {
-    "iri" : "https://github.com/jdacoello/xdvp/VehicleJourney",
-    "baseIri" : "https://github.com/jdacoello/xdvp",
+    "iri" : "https://w3id.org/def/xdvp#DataStream",
+    "baseIri" : "https://w3id.org/def/xdvp",
     "instances" : 0,
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "undefined",
-        "value" : "A journey described by the use of a particular vehicle (i.e., a driving session). Each journey belongs to exactly one vehicle and can have multiple data streams.",
-        "type" : "label"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "A particular vehicle moves from point A to point B. This driving session represents a journey.",
-        "type" : "label"
-      } ]
-    },
     "label" : {
-      "IRI-based" : "VehicleJourney",
-      "undefined" : "VehicleJourney"
+      "IRI-based" : "DataStream",
+      "undefined" : "DataStream"
     },
-    "id" : "3"
+    "individuals" : [ {
+      "iri" : "https://w3id.org/def/xdvp#indv-Speed",
+      "baseIri" : "https://w3id.org/def/xdvp",
+      "labels" : {
+        "IRI-based" : "indv-Speed"
+      }
+    }, {
+      "iri" : "https://w3id.org/def/xdvp#indv-Gear",
+      "baseIri" : "https://w3id.org/def/xdvp",
+      "labels" : {
+        "IRI-based" : "indv-Gear"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "A sequential (and potentially unbounded) flow of events and observations about a particular topic."
+    },
+    "id" : "16",
+    "superClasses" : [ "11" ]
   }, {
     "iri" : "http://www.w3.org/ns/sosa/Actuation",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -294,16 +378,16 @@
       "IRI-based" : "Actuation",
       "en" : "Actuation"
     },
-    "subClasses" : [ "33" ],
+    "subClasses" : [ "4" ],
     "comment" : {
       "en" : "An Actuation carries out an (Actuation) Procedure to change the state of the world using an Actuator."
     },
     "attributes" : [ "external" ],
-    "id" : "34"
+    "id" : "5"
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
-    "id" : "9",
+    "id" : "44",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -311,26 +395,26 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#duration",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "47",
+    "id" : "21",
     "label" : {
       "IRI-based" : "duration"
     }
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "1",
+    "id" : "7",
     "label" : {
       "undefined" : "Thing"
     }
   }, {
     "instances" : 0,
-    "union" : [ "6", "33" ],
+    "union" : [ "2", "4" ],
     "attributes" : [ "union", "anonymous" ],
-    "id" : "48"
+    "id" : "45"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "49",
+    "id" : "46",
     "label" : {
       "IRI-based" : "dateTime"
     }
@@ -351,11 +435,25 @@
       "en" : "Event"
     },
     "attributes" : [ "external" ],
-    "id" : "50"
+    "id" : "47"
+  }, {
+    "iri" : "https://w3id.org/def/xdvp#NumericalDataStream",
+    "baseIri" : "https://w3id.org/def/xdvp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "NumericalDataStream",
+      "undefined" : "NumericalDataStream"
+    },
+    "intersection" : [ "16" ],
+    "comment" : {
+      "undefined" : "A DataStream whose observed values are quantities (i.e., a number that can take any value within a range)."
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "48"
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
-    "id" : "4",
+    "id" : "49",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -363,25 +461,25 @@
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
-    "id" : "51",
+    "id" : "50",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
     }
   }, {
     "instances" : 0,
-    "union" : [ "16", "6", "50", "33" ],
+    "union" : [ "13", "2", "4", "47" ],
     "attributes" : [ "union", "anonymous" ],
-    "id" : "19"
+    "id" : "18"
   }, {
     "instances" : 0,
-    "union" : [ "16", "6", "50", "33" ],
+    "union" : [ "13", "2", "4", "47" ],
     "attributes" : [ "union", "anonymous" ],
-    "id" : "52"
+    "id" : "51"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "20",
+    "id" : "19",
     "label" : {
       "IRI-based" : "dateTime"
     }
@@ -413,45 +511,12 @@
       "IRI-based" : "ObservableProperty",
       "en" : "Observable Property"
     },
-    "subClasses" : [ "7" ],
+    "subClasses" : [ "3" ],
     "comment" : {
       "en" : "An observable quality (property, characteristic) of a FeatureOfInterest."
     },
     "attributes" : [ "external" ],
-    "id" : "40"
-  }, {
-    "iri" : "https://github.com/jdacoello/xdvp/CategoricalDataStream",
-    "baseIri" : "https://github.com/jdacoello/xdvp",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "CategoricalDataStream",
-      "undefined" : "CategoricalDataStream"
-    },
-    "intersection" : [ "29" ],
-    "comment" : {
-      "undefined" : "A DataStream whose observed values are qualitative (i.e., a value from a defined set of possible categories)."
-    },
-    "attributes" : [ "intersection" ],
-    "id" : "53"
-  }, {
-    "iri" : "https://github.com/w3c/vsso-core#ObservableVehicleProperty",
-    "baseIri" : "https://github.com/w3c/vsso-core",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://www.w3.org/ns/vsso-core",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "ObservableVehicleProperty",
-      "undefined" : "ObservableVehicleProperty"
-    },
-    "attributes" : [ "external" ],
-    "id" : "7",
-    "superClasses" : [ "40" ]
+    "id" : "37"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/Procedure",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -492,6 +557,25 @@
     "attributes" : [ "external" ],
     "id" : "54"
   }, {
+    "iri" : "https://github.com/w3c/vsso-core#ObservableVehicleProperty",
+    "baseIri" : "https://github.com/w3c/vsso-core",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://www.w3.org/ns/vsso-core",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ObservableVehicleProperty",
+      "undefined" : "ObservableVehicleProperty"
+    },
+    "attributes" : [ "external" ],
+    "id" : "3",
+    "superClasses" : [ "37" ]
+  }, {
     "iri" : "http://www.w3.org/ns/sosa/ActuatableProperty",
     "baseIri" : "http://www.w3.org/ns/sosa",
     "instances" : 0,
@@ -519,20 +603,20 @@
       "IRI-based" : "ActuatableProperty",
       "en" : "Actuatable Property"
     },
-    "subClasses" : [ "37" ],
+    "subClasses" : [ "34" ],
     "comment" : {
       "en" : "An actuatable quality (property, characteristic) of a FeatureOfInterest."
     },
     "attributes" : [ "external" ],
-    "id" : "38"
+    "id" : "35"
   }, {
     "instances" : 0,
-    "union" : [ "12", "50" ],
+    "union" : [ "11", "47" ],
     "attributes" : [ "union", "anonymous" ],
     "id" : "56"
   }, {
     "instances" : 0,
-    "union" : [ "6", "33" ],
+    "union" : [ "2", "4" ],
     "attributes" : [ "union", "anonymous" ],
     "id" : "59"
   }, {
@@ -545,30 +629,17 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "17",
+    "id" : "14",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "43",
+    "id" : "41",
     "label" : {
       "IRI-based" : "string"
     }
-  }, {
-    "iri" : "https://github.com/jdacoello/xdvp/VehiclePropertyActuation",
-    "baseIri" : "https://github.com/jdacoello/xdvp",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "VehiclePropertyActuation",
-      "undefined" : "VehiclePropertyActuation"
-    },
-    "comment" : {
-      "undefined" : "An actuation procedure to change the state of an ActuatableVehicleProperty."
-    },
-    "id" : "33",
-    "superClasses" : [ "34" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -604,12 +675,12 @@
       "IRI-based" : "Platform",
       "en" : "Platform"
     },
-    "subClasses" : [ "14" ],
+    "subClasses" : [ "28" ],
     "comment" : {
       "en" : "A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms."
     },
     "attributes" : [ "external" ],
-    "id" : "31"
+    "id" : "29"
   }, {
     "iri" : "http://purl.org/iot/ontology/iot-stream#StreamObservation",
     "baseIri" : "http://purl.org/iot/ontology/iot-stream",
@@ -636,59 +707,8 @@
       "en" : "A observation made by a sensor device captured as a data point over a time instant, or as a subset of data points over a defined time interval."
     },
     "attributes" : [ "external" ],
-    "id" : "6",
+    "id" : "2",
     "superClasses" : [ "22" ]
-  }, {
-    "iri" : "https://github.com/jdacoello/xdvp/VariableKind",
-    "baseIri" : "https://github.com/jdacoello/xdvp",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "VariableKind",
-      "undefined" : "VariableKind"
-    },
-    "individuals" : [ {
-      "iri" : "https://github.com/jdacoello/xdvp/Categorical",
-      "baseIri" : "https://github.com/jdacoello/xdvp",
-      "labels" : {
-        "IRI-based" : "Categorical"
-      }
-    }, {
-      "iri" : "https://github.com/jdacoello/xdvp/Numerical",
-      "baseIri" : "https://github.com/jdacoello/xdvp",
-      "labels" : {
-        "IRI-based" : "Numerical"
-      }
-    } ],
-    "comment" : {
-      "undefined" : "The type of the variable (e.g., Numerical/Quantifiable, or Categorical/Qualitative)"
-    },
-    "id" : "46"
-  }, {
-    "iri" : "https://github.com/jdacoello/xdvp/DataStream",
-    "baseIri" : "https://github.com/jdacoello/xdvp",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "DataStream",
-      "undefined" : "DataStream"
-    },
-    "individuals" : [ {
-      "iri" : "https://github.com/jdacoello/xdvp/indv-Speed",
-      "baseIri" : "https://github.com/jdacoello/xdvp",
-      "labels" : {
-        "IRI-based" : "indv-Speed"
-      }
-    }, {
-      "iri" : "https://github.com/jdacoello/xdvp/indv-Gear",
-      "baseIri" : "https://github.com/jdacoello/xdvp",
-      "labels" : {
-        "IRI-based" : "indv-Gear"
-      }
-    } ],
-    "comment" : {
-      "undefined" : "A sequential (and potentially unbounded) flow of events and observations about a particular topic."
-    },
-    "id" : "29",
-    "superClasses" : [ "12" ]
   }, {
     "iri" : "https://github.com/w3c/vsso-core#Vehicle",
     "baseIri" : "https://github.com/w3c/vsso-core",
@@ -706,26 +726,8 @@
       "undefined" : "Vehicle"
     },
     "attributes" : [ "external" ],
-    "id" : "14",
-    "superClasses" : [ "31" ]
-  }, {
-    "iri" : "https://github.com/w3c/vsso-core#ActuatableVehicleProperty",
-    "baseIri" : "https://github.com/w3c/vsso-core",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://www.w3.org/ns/vsso-core",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "ActuatableVehicleProperty"
-    },
-    "attributes" : [ "external" ],
-    "id" : "37",
-    "superClasses" : [ "38" ]
+    "id" : "28",
+    "superClasses" : [ "29" ]
   }, {
     "iri" : "http://purl.org/iot/ontology/iot-stream#IotStream",
     "baseIri" : "http://purl.org/iot/ontology/iot-stream",
@@ -742,92 +744,84 @@
       "IRI-based" : "IotStream",
       "undefined" : "IotStream"
     },
-    "subClasses" : [ "29" ],
+    "subClasses" : [ "16" ],
     "attributes" : [ "external" ],
-    "id" : "12"
+    "id" : "11"
   }, {
-    "iri" : "https://github.com/jdacoello/xdvp/NumericalDataStream",
-    "baseIri" : "https://github.com/jdacoello/xdvp",
+    "iri" : "https://github.com/w3c/vsso-core#ActuatableVehicleProperty",
+    "baseIri" : "https://github.com/w3c/vsso-core",
     "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://www.w3.org/ns/vsso-core",
+        "type" : "label"
+      } ]
+    },
     "label" : {
-      "IRI-based" : "NumericalDataStream",
-      "undefined" : "NumericalDataStream"
+      "IRI-based" : "ActuatableVehicleProperty"
     },
-    "intersection" : [ "29" ],
-    "comment" : {
-      "undefined" : "A DataStream whose observed values are quantities (i.e., a number that can take any value within a range)."
-    },
-    "attributes" : [ "intersection" ],
-    "id" : "72"
+    "attributes" : [ "external" ],
+    "id" : "34",
+    "superClasses" : [ "35" ]
   } ],
   "property" : [ {
-    "id" : "0",
+    "id" : "1",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "2",
+    "id" : "6",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
     "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "5",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "8",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "11",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "13",
-    "type" : "owl:objectProperty"
   }, {
     "id" : "15",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "18",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "21",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "24",
+    "id" : "17",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "8",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "28",
+    "id" : "26",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "30",
+    "id" : "27",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "31",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "32",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "35",
+    "id" : "33",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "36",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "39",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "41",
+    "id" : "38",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "42",
+    "id" : "39",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "40",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "27",
+    "id" : "43",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "44",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "45",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "25",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "23",
+    "id" : "52",
     "type" : "owl:objectProperty"
   }, {
     "id" : "55",
@@ -839,37 +833,49 @@
     "id" : "58",
     "type" : "owl:disjointWith"
   }, {
+    "id" : "24",
+    "type" : "owl:objectProperty"
+  }, {
     "id" : "62",
-    "type" : "owl:disjointWith"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "63",
     "type" : "owl:disjointWith"
   }, {
     "id" : "64",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "26",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "65",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "66",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "67",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "68",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "69",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "70",
+    "id" : "23",
     "type" : "owl:objectProperty"
   }, {
+    "id" : "25",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "70",
+    "type" : "owl:datatypeProperty"
+  }, {
     "id" : "71",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "53",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "72",
     "type" : "owl:objectProperty"
   }, {
     "id" : "73",
@@ -879,29 +885,9 @@
     "type" : "owl:datatypeProperty"
   } ],
   "propertyAttribute" : [ {
-    "iri" : "https://github.com/jdacoello/xdvp/isJourneyOfVehicle",
-    "baseIri" : "https://github.com/jdacoello/xdvp",
-    "range" : "1",
-    "label" : {
-      "IRI-based" : "isJourneyOfVehicle"
-    },
-    "domain" : "1",
-    "attributes" : [ "object", "functional" ],
-    "id" : "0"
-  }, {
-    "iri" : "https://github.com/jdacoello/xdvp/journeyAverageSpeed",
-    "baseIri" : "https://github.com/jdacoello/xdvp",
-    "range" : "4",
-    "label" : {
-      "IRI-based" : "journeyAverageSpeed"
-    },
-    "domain" : "3",
-    "attributes" : [ "datatype" ],
-    "id" : "2"
-  }, {
     "iri" : "http://www.w3.org/ns/sosa/observedProperty",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "7",
+    "range" : "3",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -932,26 +918,27 @@
       "IRI-based" : "observedProperty",
       "en" : "observed property"
     },
-    "domain" : "6",
+    "domain" : "2",
     "comment" : {
       "en" : "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "5"
+    "id" : "1"
   }, {
-    "iri" : "https://github.com/jdacoello/xdvp/journeyTravelledDistance",
-    "baseIri" : "https://github.com/jdacoello/xdvp",
-    "range" : "9",
+    "iri" : "https://w3id.org/def/xdvp#previousEvent",
+    "baseIri" : "https://w3id.org/def/xdvp",
+    "range" : "7",
     "label" : {
-      "IRI-based" : "journeyTravelledDistance"
+      "IRI-based" : "previousEvent"
     },
-    "domain" : "3",
-    "attributes" : [ "datatype" ],
-    "id" : "8"
+    "superproperty" : [ "8" ],
+    "domain" : "7",
+    "attributes" : [ "object" ],
+    "id" : "6"
   }, {
     "iri" : "http://purl.org/iot/ontology/iot-stream#derivedFrom",
     "baseIri" : "http://purl.org/iot/ontology/iot-stream",
-    "range" : "12",
+    "range" : "11",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -964,24 +951,13 @@
       "IRI-based" : "derivedFrom",
       "en" : "derived from"
     },
-    "domain" : "12",
+    "domain" : "11",
     "attributes" : [ "object", "external" ],
-    "id" : "11"
-  }, {
-    "iri" : "https://github.com/jdacoello/xdvp/hasVehicleJourney",
-    "inverse" : "0",
-    "baseIri" : "https://github.com/jdacoello/xdvp",
-    "range" : "3",
-    "label" : {
-      "IRI-based" : "hasVehicleJourney"
-    },
-    "domain" : "14",
-    "attributes" : [ "object", "inverse functional" ],
-    "id" : "13"
+    "id" : "10"
   }, {
     "iri" : "http://purl.org/iot/ontology/iot-stream#methods",
     "baseIri" : "http://purl.org/iot/ontology/iot-stream",
-    "range" : "17",
+    "range" : "14",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -993,13 +969,24 @@
     "label" : {
       "IRI-based" : "methods"
     },
+    "domain" : "13",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "12"
+  }, {
+    "iri" : "https://w3id.org/def/xdvp#observedWithUnit",
+    "baseIri" : "https://w3id.org/def/xdvp",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "observedWithUnit"
+    },
+    "superproperty" : [ "8" ],
     "domain" : "16",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "object" ],
     "id" : "15"
   }, {
     "iri" : "http://purl.org/iot/ontology/iot-stream#windowEnd",
     "baseIri" : "http://purl.org/iot/ontology/iot-stream",
-    "range" : "20",
+    "range" : "19",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1011,66 +998,74 @@
     "label" : {
       "IRI-based" : "windowEnd"
     },
-    "domain" : "19",
-    "attributes" : [ "datatype", "external" ],
-    "id" : "18"
+    "domain" : "18",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "17"
   }, {
-    "iri" : "https://github.com/jdacoello/xdvp/nextObservation",
-    "inverse" : "23",
-    "baseIri" : "https://github.com/jdacoello/xdvp",
-    "range" : "22",
+    "iri" : "https://w3id.org/def/xdvp#journeyDuration",
+    "baseIri" : "https://w3id.org/def/xdvp",
+    "range" : "21",
     "label" : {
-      "IRI-based" : "nextObservation"
+      "IRI-based" : "journeyDuration"
     },
-    "superproperty" : [ "24" ],
-    "domain" : "22",
-    "attributes" : [ "object" ],
-    "id" : "21"
+    "domain" : "0",
+    "attributes" : [ "datatype" ],
+    "id" : "20"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
     "baseIri" : "http://www.w3.org/2002/07/owl",
-    "range" : "1",
+    "range" : "7",
     "label" : {
       "IRI-based" : "topObjectProperty"
     },
-    "domain" : "1",
-    "subproperty" : [ "21", "25", "26", "27", "23" ],
+    "domain" : "7",
+    "subproperty" : [ "15", "6", "23", "24", "25" ],
     "attributes" : [ "object", "external" ],
-    "id" : "24"
+    "id" : "8"
   }, {
-    "range" : "12",
-    "domain" : "29",
+    "range" : "11",
+    "domain" : "16",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "28"
+    "id" : "26"
   }, {
-    "range" : "31",
-    "domain" : "14",
+    "range" : "29",
+    "domain" : "28",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "30"
+    "id" : "27"
   }, {
-    "range" : "34",
-    "domain" : "33",
+    "range" : "5",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "31"
+  }, {
+    "range" : "22",
+    "domain" : "2",
     "attributes" : [ "object", "anonymous" ],
     "id" : "32"
   }, {
-    "range" : "22",
-    "domain" : "6",
+    "range" : "35",
+    "domain" : "34",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "35"
+    "id" : "33"
   }, {
-    "range" : "38",
-    "domain" : "37",
+    "range" : "37",
+    "domain" : "3",
     "attributes" : [ "object", "anonymous" ],
     "id" : "36"
   }, {
-    "range" : "40",
-    "domain" : "7",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "39"
+    "iri" : "https://w3id.org/def/xdvp#hasDataStream",
+    "baseIri" : "https://w3id.org/def/xdvp",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "hasDataStream"
+    },
+    "domain" : "0",
+    "attributes" : [ "object" ],
+    "id" : "38"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/actsOnProperty",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "37",
+    "range" : "34",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1090,33 +1085,33 @@
         "value" : "http://www.w3.org/ns/sosa/ActuatableProperty",
         "type" : "iri"
       } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "In the activity (Actuation) of automatically closing a window if the temperature in a room drops below 20 degrees Celsius, the property on which the Actuator acts upon is the state of the window as it changes from being open to being closed. ",
-        "type" : "label"
-      } ],
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
         "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "In the activity (Actuation) of automatically closing a window if the temperature in a room drops below 20 degrees Celsius, the property on which the Actuator acts upon is the state of the window as it changes from being open to being closed. ",
+        "type" : "label"
       } ]
     },
     "label" : {
       "IRI-based" : "actsOnProperty",
       "en" : "acts on property"
     },
-    "domain" : "33",
+    "domain" : "4",
     "comment" : {
       "en" : "Relation between an Actuation and the property of a FeatureOfInterest it is acting upon."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "41"
+    "id" : "39"
   }, {
     "iri" : "http://purl.org/iot/ontology/iot-stream#paramValues",
     "baseIri" : "http://purl.org/iot/ontology/iot-stream",
-    "range" : "43",
+    "range" : "41",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1128,24 +1123,13 @@
     "label" : {
       "IRI-based" : "paramValues"
     },
-    "domain" : "16",
-    "attributes" : [ "datatype", "external" ],
-    "id" : "42"
-  }, {
-    "iri" : "https://github.com/jdacoello/xdvp/previousEvent",
-    "baseIri" : "https://github.com/jdacoello/xdvp",
-    "range" : "1",
-    "label" : {
-      "IRI-based" : "previousEvent"
-    },
-    "superproperty" : [ "24" ],
-    "domain" : "1",
-    "attributes" : [ "object" ],
-    "id" : "27"
+    "domain" : "13",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "40"
   }, {
     "iri" : "http://purl.org/iot/ontology/iot-stream#belongsTo",
     "baseIri" : "http://purl.org/iot/ontology/iot-stream",
-    "range" : "12",
+    "range" : "11",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1158,46 +1142,24 @@
       "IRI-based" : "belongsTo",
       "en" : "belongs to"
     },
-    "domain" : "6",
+    "domain" : "2",
     "attributes" : [ "object", "external" ],
-    "id" : "44"
+    "id" : "43"
   }, {
-    "iri" : "https://github.com/jdacoello/xdvp/hasVariableKind",
-    "baseIri" : "https://github.com/jdacoello/xdvp",
-    "range" : "46",
+    "iri" : "https://w3id.org/def/xdvp#hasVehicleJourney",
+    "inverse" : "53",
+    "baseIri" : "https://w3id.org/def/xdvp",
+    "range" : "0",
     "label" : {
-      "IRI-based" : "hasVariableKind"
+      "IRI-based" : "hasVehicleJourney"
     },
-    "domain" : "29",
-    "attributes" : [ "object", "functional" ],
-    "id" : "45"
-  }, {
-    "iri" : "https://github.com/jdacoello/xdvp/nextEvent",
-    "inverse" : "27",
-    "baseIri" : "https://github.com/jdacoello/xdvp",
-    "range" : "50",
-    "label" : {
-      "IRI-based" : "nextEvent"
-    },
-    "superproperty" : [ "24" ],
-    "domain" : "50",
-    "attributes" : [ "object" ],
-    "id" : "25"
-  }, {
-    "iri" : "https://github.com/jdacoello/xdvp/previousObservation",
-    "baseIri" : "https://github.com/jdacoello/xdvp",
-    "range" : "1",
-    "label" : {
-      "IRI-based" : "previousObservation"
-    },
-    "superproperty" : [ "24" ],
-    "domain" : "1",
-    "attributes" : [ "object" ],
-    "id" : "23"
+    "domain" : "28",
+    "attributes" : [ "object", "inverse functional" ],
+    "id" : "52"
   }, {
     "iri" : "http://purl.org/iot/ontology/iot-stream#generatedBy",
     "baseIri" : "http://purl.org/iot/ontology/iot-stream",
-    "range" : "16",
+    "range" : "13",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1214,25 +1176,46 @@
     "attributes" : [ "object", "external" ],
     "id" : "55"
   }, {
-    "range" : "3",
-    "domain" : "46",
+    "range" : "0",
+    "domain" : "16",
     "attributes" : [ "object", "anonymous" ],
     "id" : "57"
   }, {
-    "range" : "14",
-    "domain" : "3",
+    "range" : "0",
+    "domain" : "42",
     "attributes" : [ "object", "anonymous" ],
     "id" : "58"
   }, {
-    "range" : "46",
-    "domain" : "29",
-    "attributes" : [ "object", "anonymous" ],
+    "iri" : "https://w3id.org/def/xdvp#previousObservation",
+    "baseIri" : "https://w3id.org/def/xdvp",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "previousObservation"
+    },
+    "superproperty" : [ "8" ],
+    "domain" : "7",
+    "attributes" : [ "object" ],
+    "id" : "24"
+  }, {
+    "iri" : "https://w3id.org/def/xdvp#journeyTravelledDistance",
+    "baseIri" : "https://w3id.org/def/xdvp",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "journeyTravelledDistance"
+    },
+    "domain" : "0",
+    "attributes" : [ "datatype" ],
     "id" : "62"
   }, {
-    "range" : "3",
-    "domain" : "29",
+    "range" : "0",
+    "domain" : "28",
     "attributes" : [ "object", "anonymous" ],
     "id" : "63"
+  }, {
+    "range" : "42",
+    "domain" : "16",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "64"
   }, {
     "iri" : "http://purl.org/iot/ontology/iot-stream#label",
     "baseIri" : "http://purl.org/iot/ontology/iot-stream",
@@ -1248,24 +1231,23 @@
     "label" : {
       "IRI-based" : "label"
     },
-    "domain" : "50",
-    "attributes" : [ "datatype", "external" ],
-    "id" : "64"
+    "domain" : "47",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "65"
   }, {
-    "iri" : "https://github.com/jdacoello/xdvp/observedWithUnit",
-    "baseIri" : "https://github.com/jdacoello/xdvp",
-    "range" : "10",
+    "iri" : "https://w3id.org/def/xdvp#journeyAverageSpeed",
+    "baseIri" : "https://w3id.org/def/xdvp",
+    "range" : "49",
     "label" : {
-      "IRI-based" : "observedWithUnit"
+      "IRI-based" : "journeyAverageSpeed"
     },
-    "superproperty" : [ "24" ],
-    "domain" : "29",
-    "attributes" : [ "object" ],
-    "id" : "26"
+    "domain" : "0",
+    "attributes" : [ "datatype" ],
+    "id" : "66"
   }, {
     "iri" : "http://purl.org/iot/ontology/iot-stream#detectedFrom",
     "baseIri" : "http://purl.org/iot/ontology/iot-stream",
-    "range" : "12",
+    "range" : "11",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1278,9 +1260,9 @@
       "IRI-based" : "detectedFrom",
       "en" : "detected from"
     },
-    "domain" : "50",
+    "domain" : "47",
     "attributes" : [ "object", "external" ],
-    "id" : "65"
+    "id" : "67"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/implements",
     "baseIri" : "http://www.w3.org/ns/ssn",
@@ -1309,12 +1291,12 @@
       "IRI-based" : "implements",
       "en" : "implements"
     },
-    "domain" : "14",
+    "domain" : "28",
     "comment" : {
       "en" : "Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method)."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "66"
+    "id" : "68"
   }, {
     "iri" : "http://purl.org/iot/ontology/iot-stream#parameters",
     "baseIri" : "http://purl.org/iot/ontology/iot-stream",
@@ -1330,23 +1312,37 @@
     "label" : {
       "IRI-based" : "parameters"
     },
-    "domain" : "16",
-    "attributes" : [ "datatype", "external" ],
-    "id" : "67"
+    "domain" : "13",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "69"
   }, {
-    "iri" : "https://github.com/jdacoello/xdvp/journeyDuration",
-    "baseIri" : "https://github.com/jdacoello/xdvp",
+    "iri" : "https://w3id.org/def/xdvp#nextEvent",
+    "inverse" : "6",
+    "baseIri" : "https://w3id.org/def/xdvp",
     "range" : "47",
     "label" : {
-      "IRI-based" : "journeyDuration"
+      "IRI-based" : "nextEvent"
     },
-    "domain" : "3",
-    "attributes" : [ "datatype" ],
-    "id" : "68"
+    "superproperty" : [ "8" ],
+    "domain" : "47",
+    "attributes" : [ "object" ],
+    "id" : "23"
+  }, {
+    "iri" : "https://w3id.org/def/xdvp#nextObservation",
+    "inverse" : "24",
+    "baseIri" : "https://w3id.org/def/xdvp",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "nextObservation"
+    },
+    "superproperty" : [ "8" ],
+    "domain" : "22",
+    "attributes" : [ "object" ],
+    "id" : "25"
   }, {
     "iri" : "http://purl.org/iot/ontology/iot-stream#windowStart",
     "baseIri" : "http://purl.org/iot/ontology/iot-stream",
-    "range" : "49",
+    "range" : "46",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1358,13 +1354,33 @@
     "label" : {
       "IRI-based" : "windowStart"
     },
-    "domain" : "52",
-    "attributes" : [ "datatype", "external" ],
-    "id" : "69"
+    "domain" : "51",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "70"
+  }, {
+    "iri" : "https://w3id.org/def/xdvp#hasVariableKind",
+    "baseIri" : "https://w3id.org/def/xdvp",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "hasVariableKind"
+    },
+    "domain" : "16",
+    "attributes" : [ "object", "functional" ],
+    "id" : "71"
+  }, {
+    "iri" : "https://w3id.org/def/xdvp#isJourneyOfVehicle",
+    "baseIri" : "https://w3id.org/def/xdvp",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "isJourneyOfVehicle"
+    },
+    "domain" : "7",
+    "attributes" : [ "object", "functional" ],
+    "id" : "53"
   }, {
     "iri" : "http://purl.org/iot/ontology/iot-stream#analysedBy",
     "baseIri" : "http://purl.org/iot/ontology/iot-stream",
-    "range" : "16",
+    "range" : "13",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1377,19 +1393,9 @@
       "IRI-based" : "analysedBy",
       "en" : "analysed by"
     },
-    "domain" : "12",
+    "domain" : "11",
     "attributes" : [ "object", "external" ],
-    "id" : "70"
-  }, {
-    "iri" : "https://github.com/jdacoello/xdvp/hasDataStream",
-    "baseIri" : "https://github.com/jdacoello/xdvp",
-    "range" : "29",
-    "label" : {
-      "IRI-based" : "hasDataStream"
-    },
-    "domain" : "3",
-    "attributes" : [ "object" ],
-    "id" : "71"
+    "id" : "72"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/usedProcedure",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -1416,17 +1422,17 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
         "type" : "iri"
       } ]
     },
@@ -1443,7 +1449,7 @@
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasSimpleResult",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "51",
+    "range" : "50",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1460,7 +1466,7 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
@@ -1470,7 +1476,7 @@
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       } ],
       "example" : [ {
@@ -1484,11 +1490,11 @@
       "IRI-based" : "hasSimpleResult",
       "en" : "has simple result"
     },
-    "domain" : "48",
+    "domain" : "45",
     "comment" : {
       "en" : "The simple value of an Observation or Actuation or act of Sampling."
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "74"
   } ]
 }

@@ -1,4 +1,4 @@
-@prefix : <https://github.com/jdacoello/xdvp/> .
+@prefix : <https://w3id.org/def/xdvp#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -15,14 +15,15 @@
 @prefix schema: <http://schema.org/> .
 @prefix vsso-core: <https://github.com/w3c/vsso-core#> .
 @prefix iot-stream: <http://purl.org/iot/ontology/iot-stream#> .
-@base <https://github.com/jdacoello/xdvp/> .
+@base <https://w3id.org/def/xdvp#> .
 
-<https://github.com/jdacoello/xdvp/> rdf:type owl:Ontology ;
-                                      dc:creator "Daniel Alvarez-Coello"^^xsd:string ;
-                                      dct:Title <XDVP> ;
-                                      vann:preferredNamespacePrefix "xdvp" ;
-                                      rdfs:comment "This is an ontology eXtension for Dynamic Vehicle Propeties (XDVP). It extends the Vehicle Signal Specification Ontology (VSSo) to handle data streams described by (and derived from) dynamic vehicle properties." ;
-                                      owl:versionInfo 0.1 .
+<https://w3id.org/def/xdvp#> rdf:type owl:Ontology ;
+                              dc:creator "Daniel Alvarez-Coello"^^xsd:string ;
+                              dct:Title <XDVP> ;
+                              vann:preferredNamespacePrefix "xdvp"^^rdfs:Literal ;
+                              vann:preferredNamespaceUri <https://w3id.org/def/xdvp#> ;
+                              rdfs:comment "This is an ontology eXtension for Dynamic Vehicle Propeties (XDVP). It extends the Vehicle Signal Specification Ontology (VSSo) to handle data streams described by (and derived from) dynamic vehicle properties." ;
+                              owl:versionInfo 0.2 .
 
 #################################################################
 #    Annotation properties
@@ -56,6 +57,10 @@ iot-stream:streamStart rdf:type owl:AnnotationProperty ;
 vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
 ###  http://schema.org/domainIncludes
 schema:domainIncludes rdf:type owl:AnnotationProperty .
 
@@ -76,7 +81,7 @@ skos:example rdf:type owl:AnnotationProperty .
 skos:note rdf:type owl:AnnotationProperty .
 
 
-###  https://github.com/jdacoello/xdvp/topic
+###  https://w3id.org/def/xdvp#topic
 :topic rdf:type owl:AnnotationProperty ;
        rdfs:range rdfs:Literal ;
        rdfs:domain :DataStream .
@@ -196,20 +201,20 @@ ssn:implements rdf:type owl:ObjectProperty ;
                skos:example "For example, the relationship between a sensor and the scientific measuring Procedure via which it senses."@en .
 
 
-###  https://github.com/jdacoello/xdvp/hasDataStream
+###  https://w3id.org/def/xdvp#hasDataStream
 :hasDataStream rdf:type owl:ObjectProperty ;
                rdfs:domain :VehicleJourney ;
                rdfs:range :DataStream .
 
 
-###  https://github.com/jdacoello/xdvp/hasVariableKind
+###  https://w3id.org/def/xdvp#hasVariableKind
 :hasVariableKind rdf:type owl:ObjectProperty ,
                           owl:FunctionalProperty ;
                  rdfs:domain :DataStream ;
                  rdfs:range :VariableKind .
 
 
-###  https://github.com/jdacoello/xdvp/hasVehicleJourney
+###  https://w3id.org/def/xdvp#hasVehicleJourney
 :hasVehicleJourney rdf:type owl:ObjectProperty ;
                    owl:inverseOf :isJourneyOfVehicle ;
                    rdf:type owl:InverseFunctionalProperty ;
@@ -217,12 +222,12 @@ ssn:implements rdf:type owl:ObjectProperty ;
                    rdfs:range :VehicleJourney .
 
 
-###  https://github.com/jdacoello/xdvp/isJourneyOfVehicle
+###  https://w3id.org/def/xdvp#isJourneyOfVehicle
 :isJourneyOfVehicle rdf:type owl:ObjectProperty ,
                              owl:FunctionalProperty .
 
 
-###  https://github.com/jdacoello/xdvp/nextEvent
+###  https://w3id.org/def/xdvp#nextEvent
 :nextEvent rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf owl:topObjectProperty ;
            owl:inverseOf :previousEvent ;
@@ -230,7 +235,7 @@ ssn:implements rdf:type owl:ObjectProperty ;
            rdfs:range iot-stream:Event .
 
 
-###  https://github.com/jdacoello/xdvp/nextObservation
+###  https://w3id.org/def/xdvp#nextObservation
 :nextObservation rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf owl:topObjectProperty ;
                  owl:inverseOf :previousObservation ;
@@ -238,19 +243,19 @@ ssn:implements rdf:type owl:ObjectProperty ;
                  rdfs:range sosa:Observation .
 
 
-###  https://github.com/jdacoello/xdvp/observedWithUnit
+###  https://w3id.org/def/xdvp#observedWithUnit
 :observedWithUnit rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf owl:topObjectProperty ;
                   rdfs:domain :DataStream ;
                   rdfs:range qudt:Unit .
 
 
-###  https://github.com/jdacoello/xdvp/previousEvent
+###  https://w3id.org/def/xdvp#previousEvent
 :previousEvent rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf owl:topObjectProperty .
 
 
-###  https://github.com/jdacoello/xdvp/previousObservation
+###  https://w3id.org/def/xdvp#previousObservation
 :previousObservation rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf owl:topObjectProperty .
 
@@ -331,19 +336,19 @@ sosa:hasSimpleResult rdf:type owl:DatatypeProperty ;
                      skos:example "For instance, the values 23 or true."@en .
 
 
-###  https://github.com/jdacoello/xdvp/journeyAverageSpeed
+###  https://w3id.org/def/xdvp#journeyAverageSpeed
 :journeyAverageSpeed rdf:type owl:DatatypeProperty ;
                      rdfs:domain :VehicleJourney ;
                      rdfs:range rdfs:Literal .
 
 
-###  https://github.com/jdacoello/xdvp/journeyDuration
+###  https://w3id.org/def/xdvp#journeyDuration
 :journeyDuration rdf:type owl:DatatypeProperty ;
                  rdfs:domain :VehicleJourney ;
                  rdfs:range xsd:duration .
 
 
-###  https://github.com/jdacoello/xdvp/journeyTravelledDistance
+###  https://w3id.org/def/xdvp#journeyTravelledDistance
 :journeyTravelledDistance rdf:type owl:DatatypeProperty ;
                           rdfs:domain :VehicleJourney ;
                           rdfs:range rdfs:Literal .
@@ -442,7 +447,28 @@ sosa:Procedure rdf:type owl:Class ;
                skos:note "Many observations may be created via the same Procedure, the same way as many tables are assembled using the same instructions (as information objects, not their concrete realization)."@en .
 
 
-###  https://github.com/jdacoello/xdvp/CategoricalDataStream
+###  https://github.com/w3c/vsso-core#ActuatableVehicleProperty
+vsso-core:ActuatableVehicleProperty rdf:type owl:Class ;
+                                    rdfs:subClassOf sosa:ActuatableProperty ;
+                                    rdfs:isDefinedBy "https://www.w3.org/ns/vsso-core" .
+
+
+###  https://github.com/w3c/vsso-core#ObservableVehicleProperty
+vsso-core:ObservableVehicleProperty rdf:type owl:Class ;
+                                    rdfs:subClassOf sosa:ObservableProperty ;
+                                    rdfs:isDefinedBy "https://www.w3.org/ns/vsso-core" ;
+                                    rdfs:label "ObservableVehicleProperty" .
+
+
+###  https://github.com/w3c/vsso-core#Vehicle
+vsso-core:Vehicle rdf:type owl:Class ;
+                  rdfs:subClassOf sosa:Platform ;
+                  owl:disjointWith :VehicleJourney ;
+                  rdfs:isDefinedBy "https://www.w3.org/ns/vsso-core" ;
+                  rdfs:label "Vehicle" .
+
+
+###  https://w3id.org/def/xdvp#CategoricalDataStream
 :CategoricalDataStream rdf:type owl:Class ;
                        owl:equivalentClass [ owl:intersectionOf ( :DataStream
                                                                   [ rdf:type owl:Restriction ;
@@ -460,14 +486,14 @@ sosa:Procedure rdf:type owl:Class ;
                        rdfs:label "CategoricalDataStream" .
 
 
-###  https://github.com/jdacoello/xdvp/DataStream
+###  https://w3id.org/def/xdvp#DataStream
 :DataStream rdf:type owl:Class ;
             rdfs:subClassOf iot-stream:IotStream ;
             rdfs:comment "A sequential (and potentially unbounded) flow of events and observations about a particular topic." ;
             rdfs:label "DataStream" .
 
 
-###  https://github.com/jdacoello/xdvp/NumericalDataStream
+###  https://w3id.org/def/xdvp#NumericalDataStream
 :NumericalDataStream rdf:type owl:Class ;
                      owl:equivalentClass [ owl:intersectionOf ( :DataStream
                                                                 [ rdf:type owl:Restriction ;
@@ -481,45 +507,24 @@ sosa:Procedure rdf:type owl:Class ;
                      rdfs:label "NumericalDataStream" .
 
 
-###  https://github.com/jdacoello/xdvp/VariableKind
+###  https://w3id.org/def/xdvp#VariableKind
 :VariableKind rdf:type owl:Class ;
               rdfs:comment "The type of the variable (e.g., Numerical/Quantifiable, or Categorical/Qualitative)" ;
               rdfs:label "VariableKind" .
 
 
-###  https://github.com/jdacoello/xdvp/VehicleJourney
+###  https://w3id.org/def/xdvp#VehicleJourney
 :VehicleJourney rdf:type owl:Class ;
-                owl:disjointWith vsso-core:Vehicle ;
                 rdfs:label "VehicleJourney" ;
                 skos:definition "A journey described by the use of a particular vehicle (i.e., a driving session). Each journey belongs to exactly one vehicle and can have multiple data streams." ;
                 skos:example "A particular vehicle moves from point A to point B. This driving session represents a journey." .
 
 
-###  https://github.com/jdacoello/xdvp/VehiclePropertyActuation
+###  https://w3id.org/def/xdvp#VehiclePropertyActuation
 :VehiclePropertyActuation rdf:type owl:Class ;
                           rdfs:subClassOf sosa:Actuation ;
                           rdfs:comment "An actuation procedure to change the state of an ActuatableVehicleProperty." ;
                           rdfs:label "VehiclePropertyActuation" .
-
-
-###  https://github.com/w3c/vsso-core#ActuatableVehicleProperty
-vsso-core:ActuatableVehicleProperty rdf:type owl:Class ;
-                                    rdfs:subClassOf sosa:ActuatableProperty ;
-                                    rdfs:isDefinedBy "https://www.w3.org/ns/vsso-core" .
-
-
-###  https://github.com/w3c/vsso-core#ObservableVehicleProperty
-vsso-core:ObservableVehicleProperty rdf:type owl:Class ;
-                                    rdfs:subClassOf sosa:ObservableProperty ;
-                                    rdfs:isDefinedBy "https://www.w3.org/ns/vsso-core" ;
-                                    rdfs:label "ObservableVehicleProperty" .
-
-
-###  https://github.com/w3c/vsso-core#Vehicle
-vsso-core:Vehicle rdf:type owl:Class ;
-                  rdfs:subClassOf sosa:Platform ;
-                  rdfs:isDefinedBy "https://www.w3.org/ns/vsso-core" ;
-                  rdfs:label "Vehicle" .
 
 
 #################################################################
@@ -535,23 +540,23 @@ unit:UNITLESS rdf:type owl:NamedIndividual ,
               rdfs:label "Unitless"@en .
 
 
-###  https://github.com/jdacoello/xdvp/Categorical
+###  https://w3id.org/def/xdvp#Categorical
 :Categorical rdf:type owl:NamedIndividual ,
                       :VariableKind .
 
 
-###  https://github.com/jdacoello/xdvp/Numerical
+###  https://w3id.org/def/xdvp#Numerical
 :Numerical rdf:type owl:NamedIndividual ,
                     :VariableKind .
 
 
-###  https://github.com/jdacoello/xdvp/indv-Gear
+###  https://w3id.org/def/xdvp#indv-Gear
 :indv-Gear rdf:type owl:NamedIndividual ,
                     :DataStream ;
            :hasVariableKind :Categorical .
 
 
-###  https://github.com/jdacoello/xdvp/indv-Speed
+###  https://w3id.org/def/xdvp#indv-Speed
 :indv-Speed rdf:type owl:NamedIndividual ,
                      :DataStream ;
             :hasVariableKind :Numerical .

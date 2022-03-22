@@ -6,16 +6,15 @@
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix iots: <http://purl.org/iot/ontology/iot-stream#> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix vann: <http://purl.org/vocab/vann/> .
-@prefix xdvp: <https://github.com/jdacoello/xdvp/> .
 @prefix schema: <http://schema.org/> .
 @prefix vsso-core: <https://github.com/w3c/vsso-core#> .
+@prefix iot-stream: <http://purl.org/iot/ontology/iot-stream#> .
 @base <https://github.com/jdacoello/xdvp/> .
 
 <https://github.com/jdacoello/xdvp/> rdf:type owl:Ontology ;
@@ -37,15 +36,15 @@ dct:description rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/iot/ontology/iot-stream#streamEnd
-iots:streamEnd rdf:type owl:AnnotationProperty ;
-               rdfs:range xsd:dateTimeStamp ;
-               rdfs:domain iots:IotStream .
+iot-stream:streamEnd rdf:type owl:AnnotationProperty ;
+                     rdfs:range xsd:dateTimeStamp ;
+                     rdfs:domain iot-stream:IotStream .
 
 
 ###  http://purl.org/iot/ontology/iot-stream#streamStart
-iots:streamStart rdf:type owl:AnnotationProperty ;
-                 rdfs:range xsd:dateTimeStamp ;
-                 rdfs:domain iots:IotStream .
+iot-stream:streamStart rdf:type owl:AnnotationProperty ;
+                       rdfs:range xsd:dateTimeStamp ;
+                       rdfs:domain iot-stream:IotStream .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
@@ -73,9 +72,9 @@ skos:note rdf:type owl:AnnotationProperty .
 
 
 ###  https://github.com/jdacoello/xdvp/topic
-xdvp:topic rdf:type owl:AnnotationProperty ;
-           rdfs:range rdfs:Literal ;
-           rdfs:domain xdvp:DataStream .
+:topic rdf:type owl:AnnotationProperty ;
+       rdfs:range rdfs:Literal ;
+       rdfs:domain :DataStream .
 
 
 #################################################################
@@ -95,52 +94,52 @@ xsd:duration rdf:type rdfs:Datatype .
 #################################################################
 
 ###  http://purl.org/iot/ontology/iot-stream#analysedBy
-iots:analysedBy rdf:type owl:ObjectProperty ;
-                rdfs:domain iots:IotStream ;
-                rdfs:range iots:Analytics ;
-                rdfs:isDefinedBy "http://purl.org/iot/ontology/iot-stream" ;
-                rdfs:label "analysed by"@en .
+iot-stream:analysedBy rdf:type owl:ObjectProperty ;
+                      rdfs:domain iot-stream:IotStream ;
+                      rdfs:range iot-stream:Analytics ;
+                      rdfs:isDefinedBy "http://purl.org/iot/ontology/iot-stream" ;
+                      rdfs:label "analysed by"@en .
 
 
 ###  http://purl.org/iot/ontology/iot-stream#belongsTo
-iots:belongsTo rdf:type owl:ObjectProperty ;
-               rdfs:domain iots:StreamObservation ;
-               rdfs:range iots:IotStream ;
-               rdfs:isDefinedBy "http://purl.org/iot/ontology/iot-stream" ;
-               rdfs:label "belongs to"@en .
+iot-stream:belongsTo rdf:type owl:ObjectProperty ;
+                     rdfs:domain iot-stream:StreamObservation ;
+                     rdfs:range iot-stream:IotStream ;
+                     rdfs:isDefinedBy "http://purl.org/iot/ontology/iot-stream" ;
+                     rdfs:label "belongs to"@en .
 
 
 ###  http://purl.org/iot/ontology/iot-stream#derivedFrom
-iots:derivedFrom rdf:type owl:ObjectProperty ;
-                 rdfs:domain iots:IotStream ;
-                 rdfs:range iots:IotStream ;
-                 rdfs:isDefinedBy "http://purl.org/iot/ontology/iot-stream" ;
-                 rdfs:label "derived from"@en .
+iot-stream:derivedFrom rdf:type owl:ObjectProperty ;
+                       rdfs:domain iot-stream:IotStream ;
+                       rdfs:range iot-stream:IotStream ;
+                       rdfs:isDefinedBy "http://purl.org/iot/ontology/iot-stream" ;
+                       rdfs:label "derived from"@en .
 
 
 ###  http://purl.org/iot/ontology/iot-stream#detectedFrom
-iots:detectedFrom rdf:type owl:ObjectProperty ;
-                  rdfs:domain iots:Event ;
-                  rdfs:range iots:IotStream ;
-                  rdfs:isDefinedBy "http://purl.org/iot/ontology/iot-stream" ;
-                  rdfs:label "detected from"@en .
+iot-stream:detectedFrom rdf:type owl:ObjectProperty ;
+                        rdfs:domain iot-stream:Event ;
+                        rdfs:range iot-stream:IotStream ;
+                        rdfs:isDefinedBy "http://purl.org/iot/ontology/iot-stream" ;
+                        rdfs:label "detected from"@en .
 
 
 ###  http://purl.org/iot/ontology/iot-stream#generatedBy
-iots:generatedBy rdf:type owl:ObjectProperty ;
-                 rdfs:domain [ rdf:type owl:Class ;
-                               owl:unionOf ( iots:Event
-                                             iots:IotStream
-                                           )
-                             ] ;
-                 rdfs:range iots:Analytics ;
-                 rdfs:isDefinedBy "http://purl.org/iot/ontology/iot-stream" ;
-                 rdfs:label "generated by"@en .
+iot-stream:generatedBy rdf:type owl:ObjectProperty ;
+                       rdfs:domain [ rdf:type owl:Class ;
+                                     owl:unionOf ( iot-stream:Event
+                                                   iot-stream:IotStream
+                                                 )
+                                   ] ;
+                       rdfs:range iot-stream:Analytics ;
+                       rdfs:isDefinedBy "http://purl.org/iot/ontology/iot-stream" ;
+                       rdfs:label "generated by"@en .
 
 
 ###  http://www.w3.org/ns/sosa/actsOnProperty
 sosa:actsOnProperty rdf:type owl:ObjectProperty ;
-                    rdfs:domain xdvp:VehiclePropertyActuation ;
+                    rdfs:domain :VehiclePropertyActuation ;
                     rdfs:range vsso-core:ActuatableVehicleProperty ;
                     schema:domainIncludes sosa:Actuation ;
                     schema:rangeIncludes sosa:ActuatableProperty ;
@@ -153,7 +152,7 @@ sosa:actsOnProperty rdf:type owl:ObjectProperty ;
 
 ###  http://www.w3.org/ns/sosa/observedProperty
 sosa:observedProperty rdf:type owl:ObjectProperty ;
-                      rdfs:domain iots:StreamObservation ;
+                      rdfs:domain iot-stream:StreamObservation ;
                       rdfs:range vsso-core:ObservableVehicleProperty ;
                       schema:domainIncludes sosa:Observation ;
                       schema:rangeIncludes sosa:ObservableProperty ;
@@ -166,8 +165,8 @@ sosa:observedProperty rdf:type owl:ObjectProperty ;
 ###  http://www.w3.org/ns/sosa/usedProcedure
 sosa:usedProcedure rdf:type owl:ObjectProperty ;
                    rdfs:domain [ rdf:type owl:Class ;
-                                 owl:unionOf ( iots:StreamObservation
-                                               xdvp:VehiclePropertyActuation
+                                 owl:unionOf ( iot-stream:StreamObservation
+                                               :VehiclePropertyActuation
                                              )
                                ] ;
                    rdfs:range sosa:Procedure ;
@@ -193,36 +192,36 @@ ssn:implements rdf:type owl:ObjectProperty ;
 
 
 ###  https://github.com/jdacoello/xdvp/hasDataStream
-xdvp:hasDataStream rdf:type owl:ObjectProperty ;
-                   rdfs:domain xdvp:VehicleJourney ;
-                   rdfs:range xdvp:DataStream .
+:hasDataStream rdf:type owl:ObjectProperty ;
+               rdfs:domain :VehicleJourney ;
+               rdfs:range :DataStream .
 
 
 ###  https://github.com/jdacoello/xdvp/hasVariableKind
-xdvp:hasVariableKind rdf:type owl:ObjectProperty ,
-                              owl:FunctionalProperty ;
-                     rdfs:domain xdvp:DataStream ;
-                     rdfs:range xdvp:VariableKind .
+:hasVariableKind rdf:type owl:ObjectProperty ,
+                          owl:FunctionalProperty ;
+                 rdfs:domain :DataStream ;
+                 rdfs:range :VariableKind .
 
 
 ###  https://github.com/jdacoello/xdvp/hasVehicleJourney
-xdvp:hasVehicleJourney rdf:type owl:ObjectProperty ;
-                       owl:inverseOf xdvp:isJourneyOfVehicle ;
-                       rdf:type owl:InverseFunctionalProperty ;
-                       rdfs:domain vsso-core:Vehicle ;
-                       rdfs:range xdvp:VehicleJourney .
+:hasVehicleJourney rdf:type owl:ObjectProperty ;
+                   owl:inverseOf :isJourneyOfVehicle ;
+                   rdf:type owl:InverseFunctionalProperty ;
+                   rdfs:domain vsso-core:Vehicle ;
+                   rdfs:range :VehicleJourney .
 
 
 ###  https://github.com/jdacoello/xdvp/isJourneyOfVehicle
-xdvp:isJourneyOfVehicle rdf:type owl:ObjectProperty ,
-                                 owl:FunctionalProperty .
+:isJourneyOfVehicle rdf:type owl:ObjectProperty ,
+                             owl:FunctionalProperty .
 
 
 ###  https://github.com/jdacoello/xdvp/observedWithUnit
-xdvp:observedWithUnit rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf owl:topObjectProperty ;
-                      rdfs:domain xdvp:DataStream ;
-                      rdfs:range qudt:Unit .
+:observedWithUnit rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:domain :DataStream ;
+                  rdfs:range qudt:Unit .
 
 
 #################################################################
@@ -230,64 +229,64 @@ xdvp:observedWithUnit rdf:type owl:ObjectProperty ;
 #################################################################
 
 ###  http://purl.org/iot/ontology/iot-stream#label
-iots:label rdf:type owl:DatatypeProperty ;
-           rdfs:domain iots:Event ;
-           rdfs:range xsd:string ;
-           rdfs:isDefinedBy "http://purl.org/iot/ontology/iot-stream" .
-
-
-###  http://purl.org/iot/ontology/iot-stream#methods
-iots:methods rdf:type owl:DatatypeProperty ;
-             rdfs:domain iots:Analytics ;
-             rdfs:range xsd:string ;
-             rdfs:isDefinedBy "http://purl.org/iot/ontology/iot-stream" .
-
-
-###  http://purl.org/iot/ontology/iot-stream#paramValues
-iots:paramValues rdf:type owl:DatatypeProperty ;
-                 rdfs:domain iots:Analytics ;
+iot-stream:label rdf:type owl:DatatypeProperty ;
+                 rdfs:domain iot-stream:Event ;
                  rdfs:range xsd:string ;
                  rdfs:isDefinedBy "http://purl.org/iot/ontology/iot-stream" .
 
 
+###  http://purl.org/iot/ontology/iot-stream#methods
+iot-stream:methods rdf:type owl:DatatypeProperty ;
+                   rdfs:domain iot-stream:Analytics ;
+                   rdfs:range xsd:string ;
+                   rdfs:isDefinedBy "http://purl.org/iot/ontology/iot-stream" .
+
+
+###  http://purl.org/iot/ontology/iot-stream#paramValues
+iot-stream:paramValues rdf:type owl:DatatypeProperty ;
+                       rdfs:domain iot-stream:Analytics ;
+                       rdfs:range xsd:string ;
+                       rdfs:isDefinedBy "http://purl.org/iot/ontology/iot-stream" .
+
+
 ###  http://purl.org/iot/ontology/iot-stream#parameters
-iots:parameters rdf:type owl:DatatypeProperty ;
-                rdfs:domain iots:Analytics ;
-                rdfs:range xsd:string ;
-                rdfs:isDefinedBy "http://purl.org/iot/ontology/iot-stream" .
+iot-stream:parameters rdf:type owl:DatatypeProperty ;
+                      rdfs:domain iot-stream:Analytics ;
+                      rdfs:range xsd:string ;
+                      rdfs:isDefinedBy "http://purl.org/iot/ontology/iot-stream" .
 
 
 ###  http://purl.org/iot/ontology/iot-stream#windowEnd
-iots:windowEnd rdf:type owl:DatatypeProperty ;
-               rdfs:domain [ rdf:type owl:Class ;
-                             owl:unionOf ( iots:Analytics
-                                           iots:Event
-                                           iots:StreamObservation
-                                           xdvp:VehiclePropertyActuation
-                                         )
-                           ] ;
-               rdfs:range xsd:dateTime ;
-               rdfs:isDefinedBy "http://purl.org/iot/ontology/iot-stream" .
+iot-stream:windowEnd rdf:type owl:DatatypeProperty ;
+                     rdfs:domain [ rdf:type owl:Class ;
+                                   owl:unionOf ( iot-stream:Analytics
+                                                 iot-stream:Event
+                                                 iot-stream:StreamObservation
+                                                 :VehiclePropertyActuation
+                                               )
+                                 ] ;
+                     rdfs:range xsd:dateTime ;
+                     rdfs:isDefinedBy "http://purl.org/iot/ontology/iot-stream" .
 
 
 ###  http://purl.org/iot/ontology/iot-stream#windowStart
-iots:windowStart rdf:type owl:DatatypeProperty ;
-                 rdfs:domain [ rdf:type owl:Class ;
-                               owl:unionOf ( iots:Analytics
-                                             iots:Event
-                                             iots:StreamObservation
-                                             xdvp:VehiclePropertyActuation
-                                           )
-                             ] ;
-                 rdfs:range xsd:dateTime ;
-                 rdfs:isDefinedBy "http://purl.org/iot/ontology/iot-stream" .
+iot-stream:windowStart rdf:type owl:DatatypeProperty ;
+                       rdfs:domain [ rdf:type owl:Class ;
+                                     owl:unionOf ( iot-stream:Analytics
+                                                   iot-stream:Event
+                                                   iot-stream:StreamObservation
+                                                   :VehiclePropertyActuation
+                                                 )
+                                   ] ;
+                       rdfs:range xsd:dateTime ;
+                       rdfs:isDefinedBy "http://purl.org/iot/ontology/iot-stream" .
 
 
 ###  http://www.w3.org/ns/sosa/hasSimpleResult
 sosa:hasSimpleResult rdf:type owl:DatatypeProperty ;
                      rdfs:domain [ rdf:type owl:Class ;
-                                   owl:unionOf ( iots:StreamObservation
-                                                 xdvp:VehiclePropertyActuation
+                                   owl:unionOf ( iot-stream:StreamObservation
+                                                 :VehiclePropertyActuation
                                                )
                                  ] ;
                      rdfs:range rdfs:Literal ;
@@ -302,21 +301,21 @@ sosa:hasSimpleResult rdf:type owl:DatatypeProperty ;
 
 
 ###  https://github.com/jdacoello/xdvp/journeyAverageSpeed
-xdvp:journeyAverageSpeed rdf:type owl:DatatypeProperty ;
-                         rdfs:domain xdvp:VehicleJourney ;
-                         rdfs:range rdfs:Literal .
+:journeyAverageSpeed rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :VehicleJourney ;
+                     rdfs:range rdfs:Literal .
 
 
 ###  https://github.com/jdacoello/xdvp/journeyDuration
-xdvp:journeyDuration rdf:type owl:DatatypeProperty ;
-                     rdfs:domain xdvp:VehicleJourney ;
-                     rdfs:range xsd:duration .
+:journeyDuration rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :VehicleJourney ;
+                 rdfs:range xsd:duration .
 
 
 ###  https://github.com/jdacoello/xdvp/journeyTravelledDistance
-xdvp:journeyTravelledDistance rdf:type owl:DatatypeProperty ;
-                              rdfs:domain xdvp:VehicleJourney ;
-                              rdfs:range rdfs:Literal .
+:journeyTravelledDistance rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :VehicleJourney ;
+                          rdfs:range rdfs:Literal .
 
 
 #################################################################
@@ -324,30 +323,30 @@ xdvp:journeyTravelledDistance rdf:type owl:DatatypeProperty ;
 #################################################################
 
 ###  http://purl.org/iot/ontology/iot-stream#Analytics
-iots:Analytics rdf:type owl:Class ;
-               rdfs:isDefinedBy "http://purl.org/iot/ontology/iot-stream" ;
-               rdfs:label "Analytics" .
+iot-stream:Analytics rdf:type owl:Class ;
+                     rdfs:isDefinedBy "http://purl.org/iot/ontology/iot-stream" ;
+                     rdfs:label "Analytics" .
 
 
 ###  http://purl.org/iot/ontology/iot-stream#Event
-iots:Event rdf:type owl:Class ;
-           rdfs:isDefinedBy "http://purl.org/iot/ontology/iot-stream" ;
-           rdfs:label "Event"@en .
+iot-stream:Event rdf:type owl:Class ;
+                 rdfs:isDefinedBy "http://purl.org/iot/ontology/iot-stream" ;
+                 rdfs:label "Event"@en .
 
 
 ###  http://purl.org/iot/ontology/iot-stream#IotStream
-iots:IotStream rdf:type owl:Class ;
-               rdfs:isDefinedBy "http://purl.org/iot/ontology/iot-stream" ;
-               rdfs:label "IotStream" .
+iot-stream:IotStream rdf:type owl:Class ;
+                     rdfs:isDefinedBy "http://purl.org/iot/ontology/iot-stream" ;
+                     rdfs:label "IotStream" .
 
 
 ###  http://purl.org/iot/ontology/iot-stream#StreamObservation
-iots:StreamObservation rdf:type owl:Class ;
-                       rdfs:subClassOf sosa:Observation ;
-                       rdfs:comment "A observation made by a sensor device captured as a data point over a time instant, or as a subset of data points over a defined time interval."@en ;
-                       rdfs:isDefinedBy "http://purl.org/iot/ontology/iot-stream" ;
-                       rdfs:label "StreamObservation" ;
-                       skos:definition "A observation made by a sensor device captured as a data point over a time instant, or as a subset of data points over a defined time interval."@en .
+iot-stream:StreamObservation rdf:type owl:Class ;
+                             rdfs:subClassOf sosa:Observation ;
+                             rdfs:comment "A observation made by a sensor device captured as a data point over a time instant, or as a subset of data points over a defined time interval."@en ;
+                             rdfs:isDefinedBy "http://purl.org/iot/ontology/iot-stream" ;
+                             rdfs:label "StreamObservation" ;
+                             skos:definition "A observation made by a sensor device captured as a data point over a time instant, or as a subset of data points over a defined time interval."@en .
 
 
 ###  http://qudt.org/schema/qudt/Unit
@@ -413,63 +412,63 @@ sosa:Procedure rdf:type owl:Class ;
 
 
 ###  https://github.com/jdacoello/xdvp/CategoricalDataStream
-xdvp:CategoricalDataStream rdf:type owl:Class ;
-                           owl:equivalentClass [ owl:intersectionOf ( xdvp:DataStream
-                                                                      [ rdf:type owl:Restriction ;
-                                                                        owl:onProperty xdvp:hasVariableKind ;
-                                                                        owl:hasValue xdvp:Categorical
-                                                                      ]
-                                                                      [ rdf:type owl:Restriction ;
-                                                                        owl:onProperty xdvp:observedWithUnit ;
-                                                                        owl:hasValue unit:UNITLESS
-                                                                      ]
-                                                                    ) ;
-                                                 rdf:type owl:Class
-                                               ] ;
-                           rdfs:comment "A DataStream whose observed values are qualitative (i.e., a value from a defined set of possible categories)." ;
-                           rdfs:label "CategoricalDataStream" .
+:CategoricalDataStream rdf:type owl:Class ;
+                       owl:equivalentClass [ owl:intersectionOf ( :DataStream
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty :hasVariableKind ;
+                                                                    owl:hasValue :Categorical
+                                                                  ]
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty :observedWithUnit ;
+                                                                    owl:hasValue unit:UNITLESS
+                                                                  ]
+                                                                ) ;
+                                             rdf:type owl:Class
+                                           ] ;
+                       rdfs:comment "A DataStream whose observed values are qualitative (i.e., a value from a defined set of possible categories)." ;
+                       rdfs:label "CategoricalDataStream" .
 
 
 ###  https://github.com/jdacoello/xdvp/DataStream
-xdvp:DataStream rdf:type owl:Class ;
-                rdfs:subClassOf iots:IotStream ;
-                rdfs:comment "A sequential (and potentially unbounded) flow of events and observations about a particular topic." ;
-                rdfs:label "DataStream" .
+:DataStream rdf:type owl:Class ;
+            rdfs:subClassOf iot-stream:IotStream ;
+            rdfs:comment "A sequential (and potentially unbounded) flow of events and observations about a particular topic." ;
+            rdfs:label "DataStream" .
 
 
 ###  https://github.com/jdacoello/xdvp/NumericalDataStream
-xdvp:NumericalDataStream rdf:type owl:Class ;
-                         owl:equivalentClass [ owl:intersectionOf ( xdvp:DataStream
-                                                                    [ rdf:type owl:Restriction ;
-                                                                      owl:onProperty xdvp:hasVariableKind ;
-                                                                      owl:hasValue xdvp:Numerical
-                                                                    ]
-                                                                  ) ;
-                                               rdf:type owl:Class
-                                             ] ;
-                         rdfs:comment "A DataStream whose observed values are quantities (i.e., a number that can take any value within a range)." ;
-                         rdfs:label "NumericalDataStream" .
+:NumericalDataStream rdf:type owl:Class ;
+                     owl:equivalentClass [ owl:intersectionOf ( :DataStream
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty :hasVariableKind ;
+                                                                  owl:hasValue :Numerical
+                                                                ]
+                                                              ) ;
+                                           rdf:type owl:Class
+                                         ] ;
+                     rdfs:comment "A DataStream whose observed values are quantities (i.e., a number that can take any value within a range)." ;
+                     rdfs:label "NumericalDataStream" .
 
 
 ###  https://github.com/jdacoello/xdvp/VariableKind
-xdvp:VariableKind rdf:type owl:Class ;
-                  rdfs:comment "The type of the variable (e.g., Numerical/Quantifiable, or Categorical/Qualitative)" ;
-                  rdfs:label "VariableKind" .
+:VariableKind rdf:type owl:Class ;
+              rdfs:comment "The type of the variable (e.g., Numerical/Quantifiable, or Categorical/Qualitative)" ;
+              rdfs:label "VariableKind" .
 
 
 ###  https://github.com/jdacoello/xdvp/VehicleJourney
-xdvp:VehicleJourney rdf:type owl:Class ;
-                    owl:disjointWith vsso-core:Vehicle ;
-                    rdfs:label "VehicleJourney" ;
-                    skos:definition "A journey described by the use of a particular vehicle (i.e., a driving session). Each journey belongs to exactly one vehicle and can have multiple data streams." ;
-                    skos:example "A particular vehicle moves from point A to point B. This driving session represents a journey." .
+:VehicleJourney rdf:type owl:Class ;
+                owl:disjointWith vsso-core:Vehicle ;
+                rdfs:label "VehicleJourney" ;
+                skos:definition "A journey described by the use of a particular vehicle (i.e., a driving session). Each journey belongs to exactly one vehicle and can have multiple data streams." ;
+                skos:example "A particular vehicle moves from point A to point B. This driving session represents a journey." .
 
 
 ###  https://github.com/jdacoello/xdvp/VehiclePropertyActuation
-xdvp:VehiclePropertyActuation rdf:type owl:Class ;
-                              rdfs:subClassOf sosa:Actuation ;
-                              rdfs:comment "An actuation procedure to change the state of an ActuatableVehicleProperty." ;
-                              rdfs:label "VehiclePropertyActuation" .
+:VehiclePropertyActuation rdf:type owl:Class ;
+                          rdfs:subClassOf sosa:Actuation ;
+                          rdfs:comment "An actuation procedure to change the state of an ActuatableVehicleProperty." ;
+                          rdfs:label "VehiclePropertyActuation" .
 
 
 ###  https://github.com/w3c/vsso-core#ActuatableVehicleProperty
@@ -506,25 +505,25 @@ unit:UNITLESS rdf:type owl:NamedIndividual ,
 
 
 ###  https://github.com/jdacoello/xdvp/Categorical
-xdvp:Categorical rdf:type owl:NamedIndividual ,
-                          xdvp:VariableKind .
+:Categorical rdf:type owl:NamedIndividual ,
+                      :VariableKind .
 
 
 ###  https://github.com/jdacoello/xdvp/Numerical
-xdvp:Numerical rdf:type owl:NamedIndividual ,
-                        xdvp:VariableKind .
+:Numerical rdf:type owl:NamedIndividual ,
+                    :VariableKind .
 
 
 ###  https://github.com/jdacoello/xdvp/indv-Gear
-xdvp:indv-Gear rdf:type owl:NamedIndividual ,
-                        xdvp:DataStream ;
-               xdvp:hasVariableKind xdvp:Categorical .
+:indv-Gear rdf:type owl:NamedIndividual ,
+                    :DataStream ;
+           :hasVariableKind :Categorical .
 
 
 ###  https://github.com/jdacoello/xdvp/indv-Speed
-xdvp:indv-Speed rdf:type owl:NamedIndividual ,
-                         xdvp:DataStream ;
-                xdvp:hasVariableKind xdvp:Numerical .
+:indv-Speed rdf:type owl:NamedIndividual ,
+                     :DataStream ;
+            :hasVariableKind :Numerical .
 
 
 #################################################################
@@ -532,9 +531,9 @@ xdvp:indv-Speed rdf:type owl:NamedIndividual ,
 #################################################################
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( xdvp:DataStream
-                xdvp:VariableKind
-                xdvp:VehicleJourney
+  owl:members ( :DataStream
+                :VariableKind
+                :VehicleJourney
               )
 ] .
 

@@ -8,9 +8,9 @@
 
 <https://github.com/jdacoello/xdvp/> rdf:type owl:Ontology ;
                                       <http://purl.org/dc/elements/1.1/creator> "Daniel Alvarez-Coello" ;
+                                      <http://purl.org/dc/terms/Title> :XDVP ;
                                       <http://purl.org/vocab/vann/preferredNamespacePrefix> "xdvp" ;
                                       rdfs:comment "This is an ontology eXtension for Dynamic Vehicle Propeties (XDVP). It extends the Vehicle Signal Specification Ontology (VSSo) to handle data streams described by (and derived from) dynamic vehicle properties." ;
-                                      rdfs:label "XDVP" ;
                                       owl:versionInfo 0.1 .
 
 #################################################################
@@ -19,6 +19,10 @@
 
 ###  http://purl.org/dc/elements/1.1/creator
 <http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/Title
+<http://purl.org/dc/terms/Title> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/description

@@ -18,11 +18,17 @@
 @base <https://w3id.org/def/xdvp#> .
 
 <https://w3id.org/def/xdvp#> rdf:type owl:Ontology ;
-                              dc:creator "Daniel Alvarez-Coello"^^xsd:string ;
-                              dct:Title <XDVP> ;
                               vann:preferredNamespacePrefix "xdvp"^^rdfs:Literal ;
                               vann:preferredNamespaceUri <https://w3id.org/def/xdvp#> ;
-                              rdfs:comment "This is an ontology eXtension for Dynamic Vehicle Propeties (XDVP). It extends the Vehicle Signal Specification Ontology (VSSo) to handle data streams described by (and derived from) dynamic vehicle properties." ;
+                              schema:creator "Daniel Alvarez-Coello" ;
+                              schema:dateCreated "2022-03-31" ;
+                              schema:description """This is an ontology eXtension for Dynamic Vehicle Propeties (XDVP). It extends the Vehicle Signal Specification Ontology (VSSo) to handle data streams described by (and derived from) dynamic vehicle properties.
+It reuses the following ontologies: 
+* SOSA, for individual observations and actuations.
+* Iot-Stream, for aggregated information in data streams and annotations with time intervals as events and stream observations.
+* QUDT, for the unit used in the observations and the quantity kind.""" ;
+                              schema:license "http://creativecommons.org/licenses/by/4.0/" ;
+                              schema:name "XDVP: an ontology eXtension for Dynamic Vehicle Properties" ;
                               owl:versionInfo 0.2 .
 
 #################################################################
@@ -35,6 +41,10 @@ dc:creator rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/terms/Title
 dct:Title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/abstract
+dct:abstract rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/description
@@ -61,12 +71,40 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
 
+###  http://schema.org/contributor
+schema:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/creator
+schema:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/dateCreated
+schema:dateCreated rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/description
+schema:description rdf:type owl:AnnotationProperty .
+
+
 ###  http://schema.org/domainIncludes
 schema:domainIncludes rdf:type owl:AnnotationProperty .
 
 
+###  http://schema.org/license
+schema:license rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/name
+schema:name rdf:type owl:AnnotationProperty .
+
+
 ###  http://schema.org/rangeIncludes
 schema:rangeIncludes rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#versionIRI
+owl:versionIRI rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#definition

@@ -14,11 +14,17 @@
      xmlns:schema="http://schema.org/"
      xmlns:iot-stream="http://purl.org/iot/ontology/iot-stream#">
     <owl:Ontology rdf:about="https://w3id.org/def/xdvp#">
-        <dc:creator>Daniel Alvarez-Coello</dc:creator>
-        <terms:Title rdf:resource="https://w3id.org/def/XDVP"/>
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">xdvp</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="https://w3id.org/def/xdvp#"/>
-        <rdfs:comment>This is an ontology eXtension for Dynamic Vehicle Propeties (XDVP). It extends the Vehicle Signal Specification Ontology (VSSo) to handle data streams described by (and derived from) dynamic vehicle properties.</rdfs:comment>
+        <schema:creator>Daniel Alvarez-Coello</schema:creator>
+        <schema:dateCreated>2022-03-31</schema:dateCreated>
+        <schema:description>This is an ontology eXtension for Dynamic Vehicle Propeties (XDVP). It extends the Vehicle Signal Specification Ontology (VSSo) to handle data streams described by (and derived from) dynamic vehicle properties.
+It reuses the following ontologies: 
+* SOSA, for individual observations and actuations.
+* Iot-Stream, for aggregated information in data streams and annotations with time intervals as events and stream observations.
+* QUDT, for the unit used in the observations and the quantity kind.</schema:description>
+        <schema:license>http://creativecommons.org/licenses/by/4.0/</schema:license>
+        <schema:name>XDVP: an ontology eXtension for Dynamic Vehicle Properties</schema:name>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</owl:versionInfo>
     </owl:Ontology>
     
@@ -47,6 +53,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/Title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/abstract -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
     
 
 
@@ -91,6 +104,34 @@
     
 
 
+    <!-- http://schema.org/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/contributor"/>
+    
+
+
+    <!-- http://schema.org/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/creator"/>
+    
+
+
+    <!-- http://schema.org/dateCreated -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/dateCreated"/>
+    
+
+
+    <!-- http://schema.org/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/description"/>
+    
+
+
     <!-- http://schema.org/domainIncludes -->
 
 
@@ -98,10 +139,31 @@
     
 
 
+    <!-- http://schema.org/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/license"/>
+    
+
+
+    <!-- http://schema.org/name -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/name"/>
+    
+
+
     <!-- http://schema.org/rangeIncludes -->
 
 
     <owl:AnnotationProperty rdf:about="http://schema.org/rangeIncludes"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionIRI -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionIRI"/>
     
 
 

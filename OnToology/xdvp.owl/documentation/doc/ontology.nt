@@ -1,9 +1,11 @@
 <https://w3id.org/def/xdvp#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/def/xdvp#> <http://purl.org/dc/elements/1.1/creator> "Daniel Alvarez-Coello" .
-<https://w3id.org/def/xdvp#> <http://purl.org/dc/terms/Title> <https://w3id.org/def/XDVP> .
 <https://w3id.org/def/xdvp#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "xdvp"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 <https://w3id.org/def/xdvp#> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/def/xdvp#> .
-<https://w3id.org/def/xdvp#> <http://www.w3.org/2000/01/rdf-schema#comment> "This is an ontology eXtension for Dynamic Vehicle Propeties (XDVP). It extends the Vehicle Signal Specification Ontology (VSSo) to handle data streams described by (and derived from) dynamic vehicle properties." .
+<https://w3id.org/def/xdvp#> <http://schema.org/creator> "Daniel Alvarez-Coello" .
+<https://w3id.org/def/xdvp#> <http://schema.org/dateCreated> "2022-03-31" .
+<https://w3id.org/def/xdvp#> <http://schema.org/description> "This is an ontology eXtension for Dynamic Vehicle Propeties (XDVP). It extends the Vehicle Signal Specification Ontology (VSSo) to handle data streams described by (and derived from) dynamic vehicle properties.\nIt reuses the following ontologies: \n* SOSA, for individual observations and actuations.\n* Iot-Stream, for aggregated information in data streams and annotations with time intervals as events and stream observations.\n* QUDT, for the unit used in the observations and the quantity kind." .
+<https://w3id.org/def/xdvp#> <http://schema.org/license> "http://creativecommons.org/licenses/by/4.0/" .
+<https://w3id.org/def/xdvp#> <http://schema.org/name> "XDVP: an ontology eXtension for Dynamic Vehicle Properties" .
 <https://w3id.org/def/xdvp#> <http://www.w3.org/2002/07/owl#versionInfo> "0.2"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # 
@@ -19,6 +21,9 @@
 # 
 # http://purl.org/dc/terms/Title
 <http://purl.org/dc/terms/Title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/description
 <http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -39,11 +44,32 @@
 # http://purl.org/vocab/vann/preferredNamespaceUri
 <http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://schema.org/contributor
+<http://schema.org/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/creator
+<http://schema.org/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/dateCreated
+<http://schema.org/dateCreated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/description
+<http://schema.org/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://schema.org/domainIncludes
 <http://schema.org/domainIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://schema.org/license
+<http://schema.org/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/name
+<http://schema.org/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://schema.org/rangeIncludes
 <http://schema.org/rangeIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#versionIRI
+<http://www.w3.org/2002/07/owl#versionIRI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://www.w3.org/2004/02/skos/core#definition
 <http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .

@@ -1,5 +1,8 @@
 {
   "@context" : {
+    "versionIRI" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionIRI"
+    },
     "journeyAverageSpeed" : {
       "@id" : "https://w3id.org/def/xdvp#journeyAverageSpeed",
       "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
@@ -11,6 +14,9 @@
     "implements" : {
       "@id" : "http://www.w3.org/ns/ssn/implements",
       "@type" : "@id"
+    },
+    "abstract" : {
+      "@id" : "http://purl.org/dc/terms/abstract"
     },
     "journeyDuration" : {
       "@id" : "https://w3id.org/def/xdvp#journeyDuration",
@@ -43,6 +49,9 @@
     "Platform" : {
       "@id" : "http://www.w3.org/ns/sosa/Platform"
     },
+    "license" : {
+      "@id" : "http://schema.org/license"
+    },
     "derivedFrom" : {
       "@id" : "http://purl.org/iot/ontology/iot-stream#derivedFrom",
       "@type" : "@id"
@@ -50,6 +59,9 @@
     "previousObservation" : {
       "@id" : "https://w3id.org/def/xdvp#previousObservation",
       "@type" : "@id"
+    },
+    "dateCreated" : {
+      "@id" : "http://schema.org/dateCreated"
     },
     "Procedure" : {
       "@id" : "http://www.w3.org/ns/sosa/Procedure"
@@ -101,6 +113,9 @@
     },
     "creator" : {
       "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "name" : {
+      "@id" : "http://schema.org/name"
     },
     "topObjectProperty" : {
       "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
@@ -192,6 +207,9 @@
       "@id" : "http://purl.org/iot/ontology/iot-stream#parameters",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
+    "contributor" : {
+      "@id" : "http://schema.org/contributor"
+    },
     "Vehicle" : {
       "@id" : "https://github.com/w3c/vsso-core#Vehicle"
     },
@@ -203,7 +221,7 @@
       "@type" : "@id"
     },
     "description" : {
-      "@id" : "http://purl.org/dc/terms/description"
+      "@id" : "http://schema.org/description"
     },
     "preferredNamespaceUri" : {
       "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"

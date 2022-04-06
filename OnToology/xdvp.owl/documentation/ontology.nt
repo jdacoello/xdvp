@@ -1,0 +1,592 @@
+<https://w3id.org/def/xdvp#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/def/xdvp#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "xdvp"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/def/xdvp#> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/def/xdvp#> .
+<https://w3id.org/def/xdvp#> <http://schema.org/creator> "Daniel Alvarez-Coello" .
+<https://w3id.org/def/xdvp#> <http://schema.org/dateCreated> "2022-03-31" .
+<https://w3id.org/def/xdvp#> <http://schema.org/description> "This is an ontology eXtension for Dynamic Vehicle Propeties (XDVP). It extends the Vehicle Signal Specification Ontology (VSSo) to handle data streams described by (and derived from) dynamic vehicle properties.\nIt reuses the following ontologies: \n* SOSA, for individual observations and actuations.\n* Iot-Stream, for aggregated information in data streams and annotations with time intervals as events and stream observations.\n* QUDT, for the unit used in the observations and the quantity kind." .
+<https://w3id.org/def/xdvp#> <http://schema.org/license> "http://creativecommons.org/licenses/by/4.0/" .
+<https://w3id.org/def/xdvp#> <http://schema.org/name> "XDVP: an ontology eXtension for Dynamic Vehicle Properties" .
+<https://w3id.org/def/xdvp#> <http://www.w3.org/2002/07/owl#versionInfo> "0.2"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/Title
+<http://purl.org/dc/terms/Title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/iot/ontology/iot-stream#streamEnd
+<http://purl.org/iot/ontology/iot-stream#streamEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/iot/ontology/iot-stream#streamEnd> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<http://purl.org/iot/ontology/iot-stream#streamEnd> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/iot/ontology/iot-stream#IotStream> .
+# 
+# http://purl.org/iot/ontology/iot-stream#streamStart
+<http://purl.org/iot/ontology/iot-stream#streamStart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/iot/ontology/iot-stream#streamStart> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<http://purl.org/iot/ontology/iot-stream#streamStart> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/iot/ontology/iot-stream#IotStream> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/contributor
+<http://schema.org/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/creator
+<http://schema.org/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/dateCreated
+<http://schema.org/dateCreated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/description
+<http://schema.org/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/domainIncludes
+<http://schema.org/domainIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/license
+<http://schema.org/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/name
+<http://schema.org/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/rangeIncludes
+<http://schema.org/rangeIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#versionIRI
+<http://www.w3.org/2002/07/owl#versionIRI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#note
+<http://www.w3.org/2004/02/skos/core#note> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/def/xdvp#topic
+<https://w3id.org/def/xdvp#topic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/def/xdvp#topic> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/def/xdvp#topic> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/xdvp#DataStream> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# http://www.w3.org/2001/XMLSchema#duration
+<http://www.w3.org/2001/XMLSchema#duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/iot/ontology/iot-stream#analysedBy
+<http://purl.org/iot/ontology/iot-stream#analysedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/iot/ontology/iot-stream#analysedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/iot/ontology/iot-stream#IotStream> .
+<http://purl.org/iot/ontology/iot-stream#analysedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/iot/ontology/iot-stream#Analytics> .
+<http://purl.org/iot/ontology/iot-stream#analysedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/iot/ontology/iot-stream> .
+<http://purl.org/iot/ontology/iot-stream#analysedBy> <http://www.w3.org/2000/01/rdf-schema#label> "analysed by"@en .
+# 
+# http://purl.org/iot/ontology/iot-stream#belongsTo
+<http://purl.org/iot/ontology/iot-stream#belongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/iot/ontology/iot-stream#belongsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/iot/ontology/iot-stream#StreamObservation> .
+<http://purl.org/iot/ontology/iot-stream#belongsTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/iot/ontology/iot-stream#IotStream> .
+<http://purl.org/iot/ontology/iot-stream#belongsTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/iot/ontology/iot-stream> .
+<http://purl.org/iot/ontology/iot-stream#belongsTo> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to"@en .
+# 
+# http://purl.org/iot/ontology/iot-stream#derivedFrom
+<http://purl.org/iot/ontology/iot-stream#derivedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/iot/ontology/iot-stream#derivedFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/iot/ontology/iot-stream#IotStream> .
+<http://purl.org/iot/ontology/iot-stream#derivedFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/iot/ontology/iot-stream#IotStream> .
+<http://purl.org/iot/ontology/iot-stream#derivedFrom> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/iot/ontology/iot-stream> .
+<http://purl.org/iot/ontology/iot-stream#derivedFrom> <http://www.w3.org/2000/01/rdf-schema#label> "derived from"@en .
+# 
+# http://purl.org/iot/ontology/iot-stream#detectedFrom
+<http://purl.org/iot/ontology/iot-stream#detectedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/iot/ontology/iot-stream#detectedFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/iot/ontology/iot-stream#Event> .
+<http://purl.org/iot/ontology/iot-stream#detectedFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/iot/ontology/iot-stream#IotStream> .
+<http://purl.org/iot/ontology/iot-stream#detectedFrom> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/iot/ontology/iot-stream> .
+<http://purl.org/iot/ontology/iot-stream#detectedFrom> <http://www.w3.org/2000/01/rdf-schema#label> "detected from"@en .
+# 
+# http://purl.org/iot/ontology/iot-stream#generatedBy
+<http://purl.org/iot/ontology/iot-stream#generatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/iot/ontology/iot-stream#generatedBy> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/iot/ontology/iot-stream#IotStream> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/iot/ontology/iot-stream#Event> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/iot/ontology/iot-stream#generatedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/iot/ontology/iot-stream#Analytics> .
+<http://purl.org/iot/ontology/iot-stream#generatedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/iot/ontology/iot-stream> .
+<http://purl.org/iot/ontology/iot-stream#generatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "generated by"@en .
+# 
+# http://www.w3.org/ns/sosa/actsOnProperty
+<http://www.w3.org/ns/sosa/actsOnProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/actsOnProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/xdvp#VehiclePropertyActuation> .
+<http://www.w3.org/ns/sosa/actsOnProperty> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/w3c/vsso-core#ActuatableVehicleProperty> .
+<http://www.w3.org/ns/sosa/actsOnProperty> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuation> .
+<http://www.w3.org/ns/sosa/actsOnProperty> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/ActuatableProperty> .
+<http://www.w3.org/ns/sosa/actsOnProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between an Actuation and the property of a FeatureOfInterest it is acting upon."@en .
+<http://www.w3.org/ns/sosa/actsOnProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/actsOnProperty> <http://www.w3.org/2000/01/rdf-schema#label> "acts on property"@en .
+<http://www.w3.org/ns/sosa/actsOnProperty> <http://www.w3.org/2004/02/skos/core#definition> "Relation between an Actuation and the property of a FeatureOfInterest it is acting upon."@en .
+<http://www.w3.org/ns/sosa/actsOnProperty> <http://www.w3.org/2004/02/skos/core#example> "In the activity (Actuation) of automatically closing a window if the temperature in a room drops below 20 degrees Celsius, the property on which the Actuator acts upon is the state of the window as it changes from being open to being closed. "@en .
+# 
+# http://www.w3.org/ns/sosa/observedProperty
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/iot/ontology/iot-stream#StreamObservation> .
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2000/01/rdf-schema#range> <https://github.com/w3c/vsso-core#ObservableVehicleProperty> .
+<http://www.w3.org/ns/sosa/observedProperty> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/ns/sosa/observedProperty> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."@en .
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2000/01/rdf-schema#label> "observed property"@en .
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2004/02/skos/core#definition> "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."@en .
+# 
+# http://www.w3.org/ns/sosa/usedProcedure
+<http://www.w3.org/ns/sosa/usedProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/usedProcedure> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/xdvp#VehiclePropertyActuation> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/iot/ontology/iot-stream#StreamObservation> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/usedProcedure> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/Procedure> .
+<http://www.w3.org/ns/sosa/usedProcedure> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuation> .
+<http://www.w3.org/ns/sosa/usedProcedure> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/ns/sosa/usedProcedure> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Sampling> .
+<http://www.w3.org/ns/sosa/usedProcedure> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Procedure> .
+<http://www.w3.org/ns/sosa/usedProcedure> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler."@en .
+<http://www.w3.org/ns/sosa/usedProcedure> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/usedProcedure> <http://www.w3.org/2000/01/rdf-schema#label> "used procedure"@en .
+<http://www.w3.org/ns/sosa/usedProcedure> <http://www.w3.org/2004/02/skos/core#definition> "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler."@en .
+# 
+# http://www.w3.org/ns/ssn/implements
+<http://www.w3.org/ns/ssn/implements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/ssn/implements> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/w3c/vsso-core#Vehicle> .
+<http://www.w3.org/ns/ssn/implements> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/Procedure> .
+<http://www.w3.org/ns/ssn/implements> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method)."@en .
+<http://www.w3.org/ns/ssn/implements> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/ssn/> .
+<http://www.w3.org/ns/ssn/implements> <http://www.w3.org/2000/01/rdf-schema#label> "implements"@en .
+<http://www.w3.org/ns/ssn/implements> <http://www.w3.org/2004/02/skos/core#definition> "Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method)."@en .
+<http://www.w3.org/ns/ssn/implements> <http://www.w3.org/2004/02/skos/core#example> "For example, the relationship between a sensor and the scientific measuring Procedure via which it senses."@en .
+# 
+# https://w3id.org/def/xdvp#hasDataStream
+<https://w3id.org/def/xdvp#hasDataStream> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/xdvp#hasDataStream> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/xdvp#VehicleJourney> .
+<https://w3id.org/def/xdvp#hasDataStream> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/xdvp#DataStream> .
+# 
+# https://w3id.org/def/xdvp#hasVariableKind
+<https://w3id.org/def/xdvp#hasVariableKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/xdvp#hasVariableKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/def/xdvp#hasVariableKind> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/xdvp#DataStream> .
+<https://w3id.org/def/xdvp#hasVariableKind> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/xdvp#VariableKind> .
+# 
+# https://w3id.org/def/xdvp#hasVehicleJourney
+<https://w3id.org/def/xdvp#hasVehicleJourney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/xdvp#hasVehicleJourney> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/xdvp#isJourneyOfVehicle> .
+<https://w3id.org/def/xdvp#hasVehicleJourney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<https://w3id.org/def/xdvp#hasVehicleJourney> <http://www.w3.org/2000/01/rdf-schema#domain> <https://github.com/w3c/vsso-core#Vehicle> .
+<https://w3id.org/def/xdvp#hasVehicleJourney> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/xdvp#VehicleJourney> .
+# 
+# https://w3id.org/def/xdvp#isJourneyOfVehicle
+<https://w3id.org/def/xdvp#isJourneyOfVehicle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/xdvp#isJourneyOfVehicle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+# 
+# https://w3id.org/def/xdvp#nextEvent
+<https://w3id.org/def/xdvp#nextEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/xdvp#nextEvent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/def/xdvp#nextEvent> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/xdvp#previousEvent> .
+<https://w3id.org/def/xdvp#nextEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/iot/ontology/iot-stream#Event> .
+<https://w3id.org/def/xdvp#nextEvent> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/iot/ontology/iot-stream#Event> .
+# 
+# https://w3id.org/def/xdvp#nextObservation
+<https://w3id.org/def/xdvp#nextObservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/xdvp#nextObservation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/def/xdvp#nextObservation> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/xdvp#previousObservation> .
+<https://w3id.org/def/xdvp#nextObservation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Observation> .
+<https://w3id.org/def/xdvp#nextObservation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/Observation> .
+# 
+# https://w3id.org/def/xdvp#observedWithUnit
+<https://w3id.org/def/xdvp#observedWithUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/xdvp#observedWithUnit> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/def/xdvp#observedWithUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/xdvp#DataStream> .
+<https://w3id.org/def/xdvp#observedWithUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/Unit> .
+# 
+# https://w3id.org/def/xdvp#previousEvent
+<https://w3id.org/def/xdvp#previousEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/xdvp#previousEvent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+# 
+# https://w3id.org/def/xdvp#previousObservation
+<https://w3id.org/def/xdvp#previousObservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/xdvp#previousObservation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/iot/ontology/iot-stream#label
+<http://purl.org/iot/ontology/iot-stream#label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/iot/ontology/iot-stream#label> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/iot/ontology/iot-stream#Event> .
+<http://purl.org/iot/ontology/iot-stream#label> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/iot/ontology/iot-stream#label> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/iot/ontology/iot-stream> .
+# 
+# http://purl.org/iot/ontology/iot-stream#methods
+<http://purl.org/iot/ontology/iot-stream#methods> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/iot/ontology/iot-stream#methods> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/iot/ontology/iot-stream#Analytics> .
+<http://purl.org/iot/ontology/iot-stream#methods> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/iot/ontology/iot-stream#methods> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/iot/ontology/iot-stream> .
+# 
+# http://purl.org/iot/ontology/iot-stream#paramValues
+<http://purl.org/iot/ontology/iot-stream#paramValues> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/iot/ontology/iot-stream#paramValues> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/iot/ontology/iot-stream#Analytics> .
+<http://purl.org/iot/ontology/iot-stream#paramValues> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/iot/ontology/iot-stream#paramValues> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/iot/ontology/iot-stream> .
+# 
+# http://purl.org/iot/ontology/iot-stream#parameters
+<http://purl.org/iot/ontology/iot-stream#parameters> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/iot/ontology/iot-stream#parameters> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/iot/ontology/iot-stream#Analytics> .
+<http://purl.org/iot/ontology/iot-stream#parameters> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/iot/ontology/iot-stream#parameters> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/iot/ontology/iot-stream> .
+# 
+# http://purl.org/iot/ontology/iot-stream#windowEnd
+<http://purl.org/iot/ontology/iot-stream#windowEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/iot/ontology/iot-stream#windowEnd> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/xdvp#VehiclePropertyActuation> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/iot/ontology/iot-stream#StreamObservation> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/iot/ontology/iot-stream#Event> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/iot/ontology/iot-stream#Analytics> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/iot/ontology/iot-stream#windowEnd> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://purl.org/iot/ontology/iot-stream#windowEnd> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/iot/ontology/iot-stream> .
+# 
+# http://purl.org/iot/ontology/iot-stream#windowStart
+<http://purl.org/iot/ontology/iot-stream#windowStart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/iot/ontology/iot-stream#windowStart> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#unionOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/xdvp#VehiclePropertyActuation> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/iot/ontology/iot-stream#StreamObservation> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/iot/ontology/iot-stream#Event> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/iot/ontology/iot-stream#Analytics> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/iot/ontology/iot-stream#windowStart> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://purl.org/iot/ontology/iot-stream#windowStart> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/iot/ontology/iot-stream> .
+# 
+# http://www.w3.org/ns/sosa/hasSimpleResult
+<http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#unionOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/xdvp#VehiclePropertyActuation> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/iot/ontology/iot-stream#StreamObservation> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.w3.org/ns/sosa/hasSimpleResult> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuation> .
+<http://www.w3.org/ns/sosa/hasSimpleResult> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/ns/sosa/hasSimpleResult> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Sampling> .
+<http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/2000/01/rdf-schema#comment> "The simple value of an Observation or Actuation or act of Sampling."@en .
+<http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/2000/01/rdf-schema#label> "has simple result"@en .
+<http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/2004/02/skos/core#definition> "The simple value of an Observation or Actuation or act of Sampling."@en .
+<http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/2004/02/skos/core#example> "For instance, the values 23 or true."@en .
+# 
+# https://w3id.org/def/xdvp#journeyAverageSpeed
+<https://w3id.org/def/xdvp#journeyAverageSpeed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/xdvp#journeyAverageSpeed> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/xdvp#VehicleJourney> .
+<https://w3id.org/def/xdvp#journeyAverageSpeed> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# https://w3id.org/def/xdvp#journeyDuration
+<https://w3id.org/def/xdvp#journeyDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/xdvp#journeyDuration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/xdvp#VehicleJourney> .
+<https://w3id.org/def/xdvp#journeyDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#duration> .
+# 
+# https://w3id.org/def/xdvp#journeyTravelledDistance
+<https://w3id.org/def/xdvp#journeyTravelledDistance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/xdvp#journeyTravelledDistance> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/xdvp#VehicleJourney> .
+<https://w3id.org/def/xdvp#journeyTravelledDistance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/iot/ontology/iot-stream#Analytics
+<http://purl.org/iot/ontology/iot-stream#Analytics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/iot/ontology/iot-stream#Analytics> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/iot/ontology/iot-stream> .
+<http://purl.org/iot/ontology/iot-stream#Analytics> <http://www.w3.org/2000/01/rdf-schema#label> "Analytics" .
+# 
+# http://purl.org/iot/ontology/iot-stream#Event
+<http://purl.org/iot/ontology/iot-stream#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/iot/ontology/iot-stream#Event> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/iot/ontology/iot-stream> .
+<http://purl.org/iot/ontology/iot-stream#Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event"@en .
+# 
+# http://purl.org/iot/ontology/iot-stream#IotStream
+<http://purl.org/iot/ontology/iot-stream#IotStream> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/iot/ontology/iot-stream#IotStream> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/iot/ontology/iot-stream> .
+<http://purl.org/iot/ontology/iot-stream#IotStream> <http://www.w3.org/2000/01/rdf-schema#label> "IotStream" .
+# 
+# http://purl.org/iot/ontology/iot-stream#StreamObservation
+<http://purl.org/iot/ontology/iot-stream#StreamObservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/iot/ontology/iot-stream#StreamObservation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://purl.org/iot/ontology/iot-stream#StreamObservation> <http://www.w3.org/2000/01/rdf-schema#comment> "A observation made by a sensor device captured as a data point over a time instant, or as a subset of data points over a defined time interval."@en .
+<http://purl.org/iot/ontology/iot-stream#StreamObservation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/iot/ontology/iot-stream" .
+<http://purl.org/iot/ontology/iot-stream#StreamObservation> <http://www.w3.org/2000/01/rdf-schema#label> "StreamObservation" .
+<http://purl.org/iot/ontology/iot-stream#StreamObservation> <http://www.w3.org/2004/02/skos/core#definition> "A observation made by a sensor device captured as a data point over a time instant, or as a subset of data points over a defined time interval."@en .
+# 
+# http://qudt.org/schema/qudt/Unit
+<http://qudt.org/schema/qudt/Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://qudt.org/schema/qudt/Unit> <http://www.w3.org/2000/01/rdf-schema#comment> "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  \\(Q = nU\\)."^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML> .
+<http://qudt.org/schema/qudt/Unit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://qudt.org/2.1/schema/qudt> .
+<http://qudt.org/schema/qudt/Unit> <http://www.w3.org/2000/01/rdf-schema#label> "Unit" .
+# 
+# http://www.w3.org/ns/sosa/ActuatableProperty
+<http://www.w3.org/ns/sosa/ActuatableProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/ActuatableProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "An actuatable quality (property, characteristic) of a FeatureOfInterest."@en .
+<http://www.w3.org/ns/sosa/ActuatableProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/ActuatableProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Actuatable Property"@en .
+<http://www.w3.org/ns/sosa/ActuatableProperty> <http://www.w3.org/2004/02/skos/core#definition> "An actuatable quality (property, characteristic) of a FeatureOfInterest."@en .
+<http://www.w3.org/ns/sosa/ActuatableProperty> <http://www.w3.org/2004/02/skos/core#example> "A window actuator acts by changing the state between a frame and a window. The ability of the window to be opened and closed is its ActuatableProperty."@en .
+# 
+# http://www.w3.org/ns/sosa/Actuation
+<http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/2000/01/rdf-schema#comment> "An Actuation carries out an (Actuation) Procedure to change the state of the world using an Actuator."@en .
+<http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/2000/01/rdf-schema#label> "Actuation"@en .
+<http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/2004/02/skos/core#definition> "An Actuation carries out an (Actuation) Procedure to change the state of the world using an Actuator."@en .
+<http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/2004/02/skos/core#example> "The activity of automatically closing a window if the temperature in a room drops below 20 degree Celsius. The activity is the Actuation and the device that closes the window is the Actuator. The Procedure is the rule, plan, or specification that defines the conditions that triggers the Actuation, here a drop in temperature. "@en .
+# 
+# http://www.w3.org/ns/sosa/ObservableProperty
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "An observable quality (property, characteristic) of a FeatureOfInterest."@en .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Observable Property"@en .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2004/02/skos/core#definition> "An observable quality (property, characteristic) of a FeatureOfInterest."@en .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2004/02/skos/core#example> "The height of a tree, the depth of a water body, or the temperature of a surface are examples of observable properties, while the value of a classic car is not (directly) observable but asserted."@en .
+# 
+# http://www.w3.org/ns/sosa/Observation
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#comment> "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with."@en .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#label> "Observation"@en .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2004/02/skos/core#definition> "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with."@en .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2004/02/skos/core#example> "The activity of estimating the intensity of an Earthquake using the Mercalli intensity scale is an Observation as is measuring the moment magnitude, i.e., the energy released by said earthquake."@en .
+# 
+# http://www.w3.org/ns/sosa/Platform
+<http://www.w3.org/ns/sosa/Platform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/Platform> <http://www.w3.org/2000/01/rdf-schema#comment> "A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms."@en .
+<http://www.w3.org/ns/sosa/Platform> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Platform> <http://www.w3.org/2000/01/rdf-schema#label> "Platform"@en .
+<http://www.w3.org/ns/sosa/Platform> <http://www.w3.org/2004/02/skos/core#definition> "A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms."@en .
+<http://www.w3.org/ns/sosa/Platform> <http://www.w3.org/2004/02/skos/core#example> "A post, buoy, vehicle, ship, aircraft, satellite, cell-phone, human or animal may act as platforms for (technical or biological) sensors or actuators."@en .
+# 
+# http://www.w3.org/ns/sosa/Procedure
+<http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/2000/01/rdf-schema#comment> "A workflow, protocol, plan, algorithm, or computational method specifying how to make an Observation, create a Sample, or make a change to the state of the world (via an Actuator). A Procedure is re-usable, and might be involved in many Observations, Samplings, or Actuations. It explains the steps to be carried out to arrive at reproducible results."@en .
+<http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/2000/01/rdf-schema#label> "Procedure"@en .
+<http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/2004/02/skos/core#definition> "A workflow, protocol, plan, algorithm, or computational method specifying how to make an Observation, create a Sample, or make a change to the state of the world (via an Actuator). A Procedure is re-usable, and might be involved in many Observations, Samplings, or Actuations. It explains the steps to be carried out to arrive at reproducible results."@en .
+<http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/2004/02/skos/core#example> "The measured wind speed differs depending on the height of the sensor above the surface, e.g., due to friction. Consequently, procedures for measuring wind speed define a standard height for anemometers above ground, typically 10m for meteorological measures and 2m in Agrometeorology. This definition of height, sensor placement, and so forth are defined by the Procedure."@en .
+<http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/2004/02/skos/core#note> "Many observations may be created via the same Procedure, the same way as many tables are assembled using the same instructions (as information objects, not their concrete realization)."@en .
+# 
+# https://github.com/w3c/vsso-core#ActuatableVehicleProperty
+<https://github.com/w3c/vsso-core#ActuatableVehicleProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://github.com/w3c/vsso-core#ActuatableVehicleProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/ActuatableProperty> .
+<https://github.com/w3c/vsso-core#ActuatableVehicleProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.w3.org/ns/vsso-core" .
+# 
+# https://github.com/w3c/vsso-core#ObservableVehicleProperty
+<https://github.com/w3c/vsso-core#ObservableVehicleProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://github.com/w3c/vsso-core#ObservableVehicleProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<https://github.com/w3c/vsso-core#ObservableVehicleProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.w3.org/ns/vsso-core" .
+<https://github.com/w3c/vsso-core#ObservableVehicleProperty> <http://www.w3.org/2000/01/rdf-schema#label> "ObservableVehicleProperty" .
+# 
+# https://github.com/w3c/vsso-core#Vehicle
+<https://github.com/w3c/vsso-core#Vehicle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://github.com/w3c/vsso-core#Vehicle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Platform> .
+<https://github.com/w3c/vsso-core#Vehicle> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/def/xdvp#VehicleJourney> .
+<https://github.com/w3c/vsso-core#Vehicle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.w3.org/ns/vsso-core" .
+<https://github.com/w3c/vsso-core#Vehicle> <http://www.w3.org/2000/01/rdf-schema#label> "Vehicle" .
+# 
+# https://w3id.org/def/xdvp#CategoricalDataStream
+<https://w3id.org/def/xdvp#CategoricalDataStream> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/xdvp#CategoricalDataStream> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid20 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid22 .
+_:genid22 <http://www.w3.org/2002/07/owl#hasValue> <http://qudt.org/vocab/unit/UNITLESS> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/xdvp#observedWithUnit> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid24 .
+_:genid24 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/def/xdvp#Categorical> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/xdvp#hasVariableKind> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/xdvp#DataStream> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/def/xdvp#CategoricalDataStream> <http://www.w3.org/2000/01/rdf-schema#comment> "A DataStream whose observed values are qualitative (i.e., a value from a defined set of possible categories)." .
+<https://w3id.org/def/xdvp#CategoricalDataStream> <http://www.w3.org/2000/01/rdf-schema#label> "CategoricalDataStream" .
+# 
+# https://w3id.org/def/xdvp#DataStream
+<https://w3id.org/def/xdvp#DataStream> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/xdvp#DataStream> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/iot/ontology/iot-stream#IotStream> .
+<https://w3id.org/def/xdvp#DataStream> <http://www.w3.org/2000/01/rdf-schema#comment> "A sequential (and potentially unbounded) flow of events and observations about a particular topic." .
+<https://w3id.org/def/xdvp#DataStream> <http://www.w3.org/2000/01/rdf-schema#label> "DataStream" .
+# 
+# https://w3id.org/def/xdvp#NumericalDataStream
+<https://w3id.org/def/xdvp#NumericalDataStream> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/xdvp#NumericalDataStream> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid26 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid28 .
+_:genid28 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/def/xdvp#Numerical> .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/xdvp#hasVariableKind> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/xdvp#DataStream> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://w3id.org/def/xdvp#NumericalDataStream> <http://www.w3.org/2000/01/rdf-schema#comment> "A DataStream whose observed values are quantities (i.e., a number that can take any value within a range)." .
+<https://w3id.org/def/xdvp#NumericalDataStream> <http://www.w3.org/2000/01/rdf-schema#label> "NumericalDataStream" .
+# 
+# https://w3id.org/def/xdvp#VariableKind
+<https://w3id.org/def/xdvp#VariableKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/xdvp#VariableKind> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of the variable (e.g., Numerical/Quantifiable, or Categorical/Qualitative)" .
+<https://w3id.org/def/xdvp#VariableKind> <http://www.w3.org/2000/01/rdf-schema#label> "VariableKind" .
+# 
+# https://w3id.org/def/xdvp#VehicleJourney
+<https://w3id.org/def/xdvp#VehicleJourney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/xdvp#VehicleJourney> <http://www.w3.org/2000/01/rdf-schema#label> "VehicleJourney" .
+<https://w3id.org/def/xdvp#VehicleJourney> <http://www.w3.org/2004/02/skos/core#definition> "A journey described by the use of a particular vehicle (i.e., a driving session). Each journey belongs to exactly one vehicle and can have multiple data streams." .
+<https://w3id.org/def/xdvp#VehicleJourney> <http://www.w3.org/2004/02/skos/core#example> "A particular vehicle moves from point A to point B. This driving session represents a journey." .
+# 
+# https://w3id.org/def/xdvp#VehiclePropertyActuation
+<https://w3id.org/def/xdvp#VehiclePropertyActuation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/xdvp#VehiclePropertyActuation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Actuation> .
+<https://w3id.org/def/xdvp#VehiclePropertyActuation> <http://www.w3.org/2000/01/rdf-schema#comment> "An actuation procedure to change the state of an ActuatableVehicleProperty." .
+<https://w3id.org/def/xdvp#VehiclePropertyActuation> <http://www.w3.org/2000/01/rdf-schema#label> "VehiclePropertyActuation" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://qudt.org/vocab/unit/UNITLESS
+<http://qudt.org/vocab/unit/UNITLESS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://qudt.org/vocab/unit/UNITLESS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Unit> .
+<http://qudt.org/vocab/unit/UNITLESS> <http://purl.org/dc/terms/description> "An explicit unit to say something has no units."^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML> .
+<http://qudt.org/vocab/unit/UNITLESS> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://qudt.org/2.1/vocab/unit> .
+<http://qudt.org/vocab/unit/UNITLESS> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://qudt.org/vocab/unit> .
+<http://qudt.org/vocab/unit/UNITLESS> <http://www.w3.org/2000/01/rdf-schema#label> "Unitless"@en .
+# 
+# https://w3id.org/def/xdvp#Categorical
+<https://w3id.org/def/xdvp#Categorical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/xdvp#Categorical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/xdvp#VariableKind> .
+# 
+# https://w3id.org/def/xdvp#Numerical
+<https://w3id.org/def/xdvp#Numerical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/xdvp#Numerical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/xdvp#VariableKind> .
+# 
+# https://w3id.org/def/xdvp#indv-Gear
+<https://w3id.org/def/xdvp#indv-Gear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/xdvp#indv-Gear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/xdvp#DataStream> .
+<https://w3id.org/def/xdvp#indv-Gear> <https://w3id.org/def/xdvp#hasVariableKind> <https://w3id.org/def/xdvp#Categorical> .
+# 
+# https://w3id.org/def/xdvp#indv-Speed
+<https://w3id.org/def/xdvp#indv-Speed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/xdvp#indv-Speed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/xdvp#DataStream> .
+<https://w3id.org/def/xdvp#indv-Speed> <https://w3id.org/def/xdvp#hasVariableKind> <https://w3id.org/def/xdvp#Numerical> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid30 <http://www.w3.org/2002/07/owl#members> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/xdvp#VehicleJourney> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/xdvp#VariableKind> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/xdvp#DataStream> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

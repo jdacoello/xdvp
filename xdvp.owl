@@ -18,6 +18,7 @@
 @base <https://w3id.org/def/xdvp#> .
 
 <https://w3id.org/def/xdvp#> rdf:type owl:Ontology ;
+                              dct:Title "XDVP" ;
                               vann:preferredNamespacePrefix "xdvp"^^rdfs:Literal ;
                               vann:preferredNamespaceUri <https://w3id.org/def/xdvp#> ;
                               schema:creator "Daniel Alvarez-Coello" ;

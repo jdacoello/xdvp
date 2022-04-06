@@ -19,7 +19,7 @@
 
 <https://w3id.org/def/xdvp#> rdf:type owl:Ontology ;
                               dct:Title "XDVP" ;
-                              vann:preferredNamespacePrefix "xdvp"^^rdfs:Literal ;
+                              vann:preferredNamespacePrefix "xdvp" ;
                               vann:preferredNamespaceUri <https://w3id.org/def/xdvp#> ;
                               schema:creator "Daniel Alvarez-Coello" ;
                               schema:dateCreated "2022-03-31" ;
@@ -122,17 +122,12 @@ skos:note rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/def/xdvp#topic
 :topic rdf:type owl:AnnotationProperty ;
-       rdfs:range rdfs:Literal ;
        rdfs:domain :DataStream .
 
 
 #################################################################
 #    Datatypes
 #################################################################
-
-###  http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML
-rdf:HTML rdf:type rdfs:Datatype .
-
 
 ###  http://www.w3.org/2001/XMLSchema#duration
 xsd:duration rdf:type rdfs:Datatype .
@@ -364,7 +359,6 @@ sosa:hasSimpleResult rdf:type owl:DatatypeProperty ;
                                                  :VehiclePropertyActuation
                                                )
                                  ] ;
-                     rdfs:range rdfs:Literal ;
                      schema:domainIncludes sosa:Actuation ,
                                            sosa:Observation ,
                                            sosa:Sampling ;
@@ -377,8 +371,7 @@ sosa:hasSimpleResult rdf:type owl:DatatypeProperty ;
 
 ###  https://w3id.org/def/xdvp#journeyAverageSpeed
 :journeyAverageSpeed rdf:type owl:DatatypeProperty ;
-                     rdfs:domain :VehicleJourney ;
-                     rdfs:range rdfs:Literal .
+                     rdfs:domain :VehicleJourney .
 
 
 ###  https://w3id.org/def/xdvp#journeyDuration
@@ -389,8 +382,7 @@ sosa:hasSimpleResult rdf:type owl:DatatypeProperty ;
 
 ###  https://w3id.org/def/xdvp#journeyTravelledDistance
 :journeyTravelledDistance rdf:type owl:DatatypeProperty ;
-                          rdfs:domain :VehicleJourney ;
-                          rdfs:range rdfs:Literal .
+                          rdfs:domain :VehicleJourney .
 
 
 #################################################################
@@ -426,7 +418,6 @@ iot-stream:StreamObservation rdf:type owl:Class ;
 
 ###  http://qudt.org/schema/qudt/Unit
 qudt:Unit rdf:type owl:Class ;
-          rdfs:comment "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  \\(Q = nU\\)."^^rdf:HTML ;
           rdfs:isDefinedBy <http://qudt.org/2.1/schema/qudt> ;
           rdfs:label "Unit" .
 
@@ -573,7 +564,6 @@ vsso-core:Vehicle rdf:type owl:Class ;
 ###  http://qudt.org/vocab/unit/UNITLESS
 unit:UNITLESS rdf:type owl:NamedIndividual ,
                        qudt:Unit ;
-              dct:description "An explicit unit to say something has no units."^^rdf:HTML ;
               rdfs:isDefinedBy <http://qudt.org/2.1/vocab/unit> ,
                                <http://qudt.org/vocab/unit> ;
               rdfs:label "Unitless"@en .
